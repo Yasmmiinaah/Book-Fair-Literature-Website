@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Interview: Taissier Khalaf</title>
+      <link rel="icon" href="assets/images/logos/MLogo.png" />
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css" />
+      <link rel="stylesheet" href="assets/css/main.css" />
+   </head>
+   <body>
+      <!-- ======= Header Section ======= -->
+      <header class="header">
+         <div class="header-1">
+            <a href="index.html" class="logo">
+            <img src="assets/images/logos/BLogo.png" style="height: 60px;" />
+            </a>
+            <form action="" class="search-form">
+               <input type="search" placeholder="search here..." id="search-box" />
+               <label for="search-box" class="fa-solid fa-search"></label>
+            </form>
+            <div class="icons">
+               <div id="search-btn" class="fa-solid fa-search"></div>
+               <a href="#" class="fa-solid fa-heart"></a>
+               <div id="login-btn" class="fa-thin fa-user"></div>
+            </div>
+         </div>
+         <div class="header-2">
+            <nav class="navbar">
+               <a href="index.html">Home</a>
+               <a href="library.html">New Releases</a>
+               <a href="book-club.html">Book Club</a>
+               <a href="interviews.html">Interview</a>
+               <a href="contact.html">Contact</a>
+            </nav>
+         </div>
+      </header>
+      <!-- ======= Bottom Navigation Bar ======= -->
+      <nav class="bottom-navbar">
+         <a href="index.html" class="fa-solid fa-house-blank"></a>
+         <a href="library.html#featured" class="fa-solid fa-fire"></a>
+         <a href="book-club.html" class="fa-solid fa-books"></a>
+         <a href="interviews.html" class="fa-solid fa-blog"></a>
+         <a href="#Contact" class="fa-solid fa-envelopes"></a>
+      </nav>
+      <!-- ======= Login/Register/Reset Forms ======= -->
+      <div class="login-form-container">
+         <div id="close-login-btn" class="fa-solid fa-times"></div>
+         <!-- Login Form -->
+         <form id="login-form">
+            <h3>sign in</h3>
+            <span>username</span>
+            <input type="email" class="box" placeholder="enter your email" required />
+            <span>password</span>
+            <input type="password" class="box" placeholder="enter your password" required />
+            <div class="checkbox">
+               <input type="checkbox" id="remember-me" />
+               <label for="remember-me"> remember me</label>
+            </div>
+            <input type="submit" value="sign in" class="btn" />
+            <p>Forgotten your password? <a href="#" id="show-reset">Reset Password</a></p>
+            <p>First time? <a href="#" id="show-register">create one</a></p>
+         </form>
+         <!-- Register Form -->
+         <form id="register-form" style="display: none;">
+            <h3>create account</h3>
+            <div class="name-fields">
+               <div>
+                  <span>first name</span>
+                  <input type="text" class="box" placeholder="enter your first name" required />
+               </div>
+               <div>
+                  <span>last name</span>
+                  <input type="text" class="box" placeholder="enter your last name" required />
+               </div>
+            </div>
+            <span>email</span>
+            <input type="email" class="box" placeholder="enter your email" required />
+            <span>password</span>
+            <input type="password" class="box" placeholder="enter your password" required />
+            <input type="submit" value="register" class="btn" />
+            <p>Nah, it's not my first time!! <a href="#" id="show-login">Login</a></p>
+         </form>
+         <!-- Reset Password Form -->
+         <form id="reset-form" style="display: none;">
+            <h3>reset password</h3>
+            <span>your email</span>
+            <input type="email" class="box" placeholder="enter your registered email" required />
+            <input type="submit" value="send reset link" class="btn" />
+            <p id="reset-msg" style="font-size: 1.4rem; text-align:center; display: none;"></p>
+            <p>Remembered your password? <a href="#" id="show-login-again">Login</a></p>
+         </form>
+      </div>
+      <!-- ======= User Menu (Dropdown) ======= -->
+      <div id="user-menu" style="display: none; position: absolute; top: 70px; right: 20px; background: white; border: 1px solid #ccc; border-radius: 5px; padding: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 1000;">
+         <p id="welcome-name" style="margin: 0 0 10px; font-size: 1.5rem; color: #444;"></p>
+         <button onclick="logout()" style="background: var(--pink); color: white; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer;">Logout</button>
+      </div>
+      <!-- ======= (Interview Section) ======= -->
+      <section id="pinterview">
+         <div class="interview-content">
+            <h3>In discussion with shortlisted author Taissier Khalaf</h3>
+            <div class="interview-question-answer">
+               <p><strong>When did you begin writing The Andalusian Messiah and where did the inspiration for it come from?</strong></p>
+               <p>I started writing The Andalusian Messiah in late 2022. The inspiration came to me when I read a peer-reviewed scientific study about the migration of Andalusians to Galata neighborhood in European Istanbul one hundred years after the fall of Granada. The study expanded my horizons about the Beyoğlu neighborhood and the Galata tower which had interested me since the first days of my stay in Istanbul – I lived there for five years, from late 2018 to late 2023. Before that study, I didn’t entirely understand why there was an Andalusian-style mosque in Istanbul. I mean an Arab mosque. From here, a long research process began that was more like an investigative report in different sources in search of the Andalusian physician Muhammad ibn Abi al-Aas, the mysterious and multi-layered character, until I managed to solve his mystery and the mystery behind his disguise under multiple names.</p>
+            </div>
+            <div class="interview-question-answer">
+               <p><strong>Did the novel take long to write and where were you when you finished it?</strong></p>
+               <p>Writing the novel took almost one year. But it was preceded by a research period of about a year. I used to go to a café near my house in Bakirköy neighborhood in Istanbul every day from 9 am to 3 pm. I wrote many versions and drafts that had to do with the form and the order of the chapters. I even changed the narration of the novel twice. I wrote the whole novel from the point of view of an omniscient narrator then I discovered that the omniscient narrator who tells about characters will not be able to convince the reader in many of the instances that would require the narrator to be the speaker. So I rewrote it alternating between the omniscient and the first person narrator, but there were some stylistic problems that seemed to affect the flow of the narration. After some hesitation, I decided to write all of it in the first person. This was much better than the first two drafts.</p>
+            </div>
+            <div class="interview-question-answer">
+               <p><strong>Do you have writing rituals?</strong></p>
+               <p>I like to write in crowded places amid people’s movement, voices, laughs, and comments. Faces, their expressions, and movement stimulate my imagination more than sitting in an office isolated from sound and movement. Also, I like to visit places that I write about and to contemplate the details and the narrator’s movement in these places, like filmmaking. For example, when I wrote the paragraphs about the Galata tower. I used to visit the tower daily, climb the stairs to its top and look out the windows at different times: morning, noon, and evening. I would contemplate the building stones and that view extending over the Bosphorus, the Golden Horn, and the neighborhoods  of Balat, Süleymaniye, and Fatih.</p>
+            </div>
+            <div class="interview-question-answer">
+               <p><strong>What is your next literary project after this novel?</strong></p>
+               <p>I am seriously considering writing a novel about a murder that took place in Damascus in the first half of the nineteenth century, and which turned into a global event.</p>
+            </div>
+         </div>
+      </section>
+      <!-- ======= Footer Section ======= -->
+      <section class="footer">
+         <div class="box-container">
+            <div class="box">
+               <h3>Quick links</h3>
+               <a href="index.html"><i class="fa-solid fa-arrow-right"></i> Home</a>
+               <a href="library.html"><i class="fa-solid fa-arrow-right"></i> New Releases</a>
+               <a href="book-club.html"><i class="fa-solid fa-arrow-right"></i> Book Club</a>
+               <a href="blogs.html"><i class="fa-solid fa-arrow-right"></i> Blog</a>
+               <a href="contact.html"><i class="fa-solid fa-arrow-right"></i> Contact</a>
+            </div>
+            <div class="box">
+               <h3>Extra links</h3>
+               <a href="library.html"><i class="fa-solid fa-arrow-right"></i> Search Books</a>
+               <a href="compare.html"><i class="fa-solid fa-arrow-right"></i> Compare Books</a>
+               <a href="store.html"><i class="fa-solid fa-arrow-right"></i> Online Bookstore</a>
+               <a href="index.html#reviews"><i class="fa-solid fa-arrow-right"></i> Reviews & Ratings</a>
+               <a href="Interviews.html"><i class="fa-solid fa-arrow-right"></i> Interviews & Events</a>
+            </div>
+            <div class="box">
+               <h3>Contact info</h3>
+               <a href="tel:+201211774738"><i class="fa-solid fa-phone"></i> +20 1211774738</a>
+               <a href="tel:+201019720641"><i class="fa-solid fa-phone"></i> +20 1019720641</a>
+               <a href="mailto:amr10tuf@gmail.com"><i class="fa-solid fa-envelope"></i> amr10tuf@gmail.com</a>
+               <img src="assets/images/m8olty.png" class="m8olty" />
+            </div>
+         </div>
+         <div class="share">
+            <a href="https://www.linkedin.com/in/amryb/" class="fab fa-linkedin"></a>
+            <a href="https://github.com/AMRYB" class="fa-brands fa-github"></a>
+            <a href="https://www.facebook.com/DrAmryasser" class="fa-brands fa-facebook-f"></a>
+            <a href="https://discord.gg/AMRYB" class="fa-brands fa-discord"></a>
+         </div>
+      </section>
+      <!-- ======= Scripts ======= -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>

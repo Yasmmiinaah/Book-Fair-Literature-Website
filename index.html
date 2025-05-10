@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Home</title>
+      <link rel="icon" href="assets/images/logos/MLogo.png" />
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css" />
+      <link rel="stylesheet" href="assets/css/main.css" />
+   </head>
+   <body>
+      <!-- ======= Header Section ======= -->
+      <header class="header">
+         <div class="header-1">
+            <a href="index.html" class="logo">
+            <img src="assets/images/logos/BLogo.png" style="height: 60px;" />
+            </a>
+            <form action="" class="search-form">
+               <input type="search" placeholder="search here..." id="search-box" />
+               <label for="search-box" class="fa-solid fa-search"></label>
+            </form>
+            <div class="icons">
+               <div id="search-btn" class="fa-solid fa-search"></div>
+               <a href="#" class="fa-solid fa-heart"></a>
+               <div id="login-btn" class="fa-thin fa-user"></div>
+            </div>
+         </div>
+         <div class="header-2">
+            <nav class="navbar">
+               <a href="index.html">Home</a>
+               <a href="library.html">New Releases</a>
+               <a href="book-club.html">Book Club</a>
+               <a href="interviews.html">Interview</a>
+               <a href="#">Contact</a>
+            </nav>
+         </div>
+      </header>
+      <!-- ======= Bottom Navigation Bar ======= -->
+      <nav class="bottom-navbar">
+         <a href="index.html" class="fa-solid fa-house-blank"></a>
+         <a href="library.html#featured" class="fa-solid fa-fire"></a>
+         <a href="book-club.html" class="fa-solid fa-books"></a>
+         <a href="interviews.html" class="fa-solid fa-blog"></a>
+         <a href="#Contact" class="fa-solid fa-envelopes"></a>
+      </nav>
+      <!-- ======= Login/Register/Reset Forms ======= -->
+      <div class="login-form-container">
+         <div id="close-login-btn" class="fa-solid fa-times"></div>
+         <!-- Login Form -->
+         <form id="login-form">
+            <h3>sign in</h3>
+            <span>username</span>
+            <input type="email" class="box" placeholder="enter your email" required />
+            <span>password</span>
+            <input type="password" class="box" placeholder="enter your password" required />
+            <div class="checkbox">
+               <input type="checkbox" id="remember-me" />
+               <label for="remember-me"> remember me</label>
+            </div>
+            <input type="submit" value="sign in" class="btn" />
+            <p>Forgotten your password? <a href="#" id="show-reset">Reset Password</a></p>
+            <p>First time? <a href="#" id="show-register">create one</a></p>
+         </form>
+         <!-- Register Form -->
+         <form id="register-form" style="display: none;">
+            <h3>create account</h3>
+            <div class="name-fields">
+               <div>
+                  <span>first name</span>
+                  <input type="text" class="box" placeholder="enter your first name" required />
+               </div>
+               <div>
+                  <span>last name</span>
+                  <input type="text" class="box" placeholder="enter your last name" required />
+               </div>
+            </div>
+            <span>email</span>
+            <input type="email" class="box" placeholder="enter your email" required />
+            <span>password</span>
+            <input type="password" class="box" placeholder="enter your password" required />
+            <input type="submit" value="register" class="btn" />
+            <p>Nah, it's not my first time!! <a href="#" id="show-login">Login</a></p>
+         </form>
+         <!-- Reset Password Form -->
+         <form id="reset-form" style="display: none;">
+            <h3>reset password</h3>
+            <span>your email</span>
+            <input type="email" class="box" placeholder="enter your registered email" required />
+            <input type="submit" value="send reset link" class="btn" />
+            <p id="reset-msg" style="font-size: 1.4rem; text-align:center; display: none;"></p>
+            <p>Remembered your password? <a href="#" id="show-login-again">Login</a></p>
+         </form>
+      </div>
+      <!-- ======= User Menu (Dropdown) ======= -->
+      <div id="user-menu" style="display: none; position: absolute; top: 70px; right: 20px; background: white; border: 1px solid #ccc; border-radius: 5px; padding: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 1000;">
+         <p id="welcome-name" style="margin: 0 0 10px; font-size: 1.5rem; color: #444;"></p>
+         <button onclick="logout()" style="background: var(--pink); color: white; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer;">Logout</button>
+      </div>
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="row">
+
+        <div class="content">
+            <h3>upto 75% off</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt nostrum accusamus. Nam alias sit necessitatibus, aliquid ex minima at!</p>
+            <a href="#" class="btn">shop now</a>
+        </div>
+
+        <div class="swiper books-slider">
+            <div class="swiper-wrapper">
+                <a href="#" class="swiper-slide"><img src="assets/images/book-1.png"></a>
+                <a href="#" class="swiper-slide"><img src="assets/images/book-2.png"></a>
+                <a href="#" class="swiper-slide"><img src="assets/images/book-3.png"></a>
+                <a href="#" class="swiper-slide"><img src="assets/images/book-4.png"></a>
+                <a href="#" class="swiper-slide"><img src="assets/images/book-5.png"></a>
+                <a href="#" class="swiper-slide"><img src="assets/images/book-6.png"></a>
+            </div>
+            <img src="assets/images/stand.png" class="stand">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- home section ense  -->
+
+<!-- icons section starts  -->
+
+<section class="icons-container">
+
+    <div class="icons">
+        <i class="fa-solid fa-shipping-fast"></i>
+        <div class="content">
+            <h3>free shipping</h3>
+            <p>order over $100</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fa-solid fa-lock"></i>
+        <div class="content">
+            <h3>secure payment</h3>
+            <p>100 secure payment</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fa-solid fa-redo-alt"></i>
+        <div class="content">
+            <h3>easy returns</h3>
+            <p>10 days returns</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fa-solid fa-headset"></i>
+        <div class="content">
+            <h3>24/7 support</h3>
+            <p>call us anytime</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- icons section ends -->
+
+<!-- featured section starts  -->
+
+<section class="featured" id="featured">
+
+    <h1 class="heading"> <span>New Releases</span> </h1>
+
+    <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fa-solid fa-search"></a>
+                    <a href="#" class="fa-solid fa-heart"></a>
+                    <a href="#" class="fa-solid fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="assets/images/book-1.png">
+                </div>
+                <div class="content">
+                    <h3>featured books</h3>
+                    <div class="price">951 Member</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fa-solid fa-search"></a>
+                    <a href="#" class="fa-solid fa-heart"></a>
+                    <a href="#" class="fa-solid fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="assets/images/book-2.png">
+                </div>
+                <div class="content">
+                    <h3>featured books</h3>
+                    <div class="price">951 Member</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fa-solid fa-search"></a>
+                    <a href="#" class="fa-solid fa-heart"></a>
+                    <a href="#" class="fa-solid fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="assets/images/book-3.png">
+                </div>
+                <div class="content">
+                    <h3>featured books</h3>
+                    <div class="price">951 Member</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fa-solid fa-search"></a>
+                    <a href="#" class="fa-solid fa-heart"></a>
+                    <a href="#" class="fa-solid fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="assets/images/book-4.png">
+                </div>
+                <div class="content">
+                    <h3>featured books</h3>
+                    <div class="price">951 Member</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fa-solid fa-search"></a>
+                    <a href="#" class="fa-solid fa-heart"></a>
+                    <a href="#" class="fa-solid fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="assets/images/book-5.png">
+                </div>
+                <div class="content">
+                    <h3>featured books</h3>
+                    <div class="price">951 Member</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fa-solid fa-search"></a>
+                    <a href="#" class="fa-solid fa-heart"></a>
+                    <a href="#" class="fa-solid fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="assets/images/book-6.png">
+                </div>
+                <div class="content">
+                    <h3>featured books</h3>
+                    <div class="price">951 Member</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fa-solid fa-search"></a>
+                    <a href="#" class="fa-solid fa-heart"></a>
+                    <a href="#" class="fa-solid fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="assets/images/book-7.png">
+                </div>
+                <div class="content">
+                    <h3>featured books</h3>
+                    <div class="price">951 Member</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fa-solid fa-search"></a>
+                    <a href="#" class="fa-solid fa-heart"></a>
+                    <a href="#" class="fa-solid fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="assets/images/book-8.png">
+                </div>
+                <div class="content">
+                    <h3>featured books</h3>
+                    <div class="price">951 Member</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fa-solid fa-search"></a>
+                    <a href="#" class="fa-solid fa-heart"></a>
+                    <a href="#" class="fa-solid fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="assets/images/book-9.png">
+                </div>
+                <div class="content">
+                    <h3>featured books</h3>
+                    <div class="price">951 Member</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fa-solid fa-search"></a>
+                    <a href="#" class="fa-solid fa-heart"></a>
+                    <a href="#" class="fa-solid fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="assets/images/book-10.png">
+                </div>
+                <div class="content">
+                    <h3>featured books</h3>
+                    <div class="price">951 Member</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+</section>
+
+<!-- featured section ends -->
+
+<!-- newsletter section starts -->
+
+<section class="newsletter">
+
+    <form action="">
+        <h3>Subscribe for latest updates</h3>
+        <input type="email" name="" placeholder="Enter your email" id="" class="box">
+        <input type="submit" value="Subscribe" class="btn">
+    </form>
+
+</section>
+
+<!-- newsletter section ends -->
+
+<!-- book-club section starts  -->
+
+<section class="book-club" id="book-club">
+
+    <h1 class="heading"> <span>New Releases</span> </h1>
+
+    <div class="swiper book-club-slider">
+
+        <div class="swiper-wrapper">
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/book-1.png">
+                </div>
+                <div class="content">
+                    <h3>new book-club</h3>
+                    <div class="price">951 Member</span></div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/book-2.png">
+                </div>
+                <div class="content">
+                    <h3>new book-club</h3>
+                    <div class="price">951 Member</span></div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/book-3.png">
+                </div>
+                <div class="content">
+                    <h3>new book-club</h3>
+                    <div class="price">951 Member</span></div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/book-4.png">
+                </div>
+                <div class="content">
+                    <h3>new book-club</h3>
+                    <div class="price">951 Member</span></div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/book-5.png">
+                </div>
+                <div class="content">
+                    <h3>new book-club</h3>
+                    <div class="price">951 Member</span></div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="swiper book-club-slider">
+
+        <div class="swiper-wrapper">
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/book-6.png">
+                </div>
+                <div class="content">
+                    <h3>new book-club</h3>
+                    <div class="price">951 Member</span></div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/book-7.png">
+                </div>
+                <div class="content">
+                    <h3>new book-club</h3>
+                    <div class="price">951 Member</span></div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/book-8.png">
+                </div>
+                <div class="content">
+                    <h3>new book-club</h3>
+                    <div class="price">951 Member</span></div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/book-9.png">
+                </div>
+                <div class="content">
+                    <h3>new book-club</h3>
+                    <div class="price">951 Member</span></div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/book-10.png">
+                </div>
+                <div class="content">
+                    <h3>new book-club</h3>
+                    <div class="price">951 Member</span></div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- book-club section ends -->
+
+<!-- deal section starts  -->
+
+<section class="deal">
+
+    <div class="content">
+        <h3>deal of the day</h3>
+        <h1>upto 50% off</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis in atque dolore tempora quaerat at fuga dolorum natus velit.</p>
+        <a href="#" class="btn">shop now</a>
+    </div>
+
+    <div class="image">
+        <img src="assets/images/deal-img.jpg">
+    </div>
+
+</section>
+
+<!-- deal section ends -->
+
+<!-- reviews section starts  -->
+
+<section class="reviews" id="reviews">
+
+    <h1 class="heading"> <span>client's reviews</span> </h1>
+
+    <div class="swiper reviews-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="assets/images/reviews/pic-1.jpg">
+                <h3>Amr Yasser</h3>
+                <p>The website is generally good, but I wish there were more options for sorting books and searching. Also, there were some issues with loading pages at times. It wasn’t a bad experience, but there are things that need improvement.</p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="assets/images/reviews/pic-2.jpg">
+                <h3>Youssef Mahmoud</h3>
+                <p>The website was okay, but it needs some improvements. The design isn’t very easy to navigate, and searching for books can sometimes take time. Overall, the experience was average, but it might be better after updates.</p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="assets/images/reviews/pic-3.jpg">
+                <h3>Menna Tulla Mahmoud</h3>
+                <p>The experience was great! The website is easy to use, and the selection of books is vast. However, it would be nice to have a little more development in browsing speed and more options for sorting books. Overall, the site is excellent.</p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="assets/images/reviews/pic-4.jpg">
+                <h3>Mariem Mohamed</h3>
+                <p>The book fair website is fantastic! The design is beautiful and user-friendly. I loved the book classification and reviews feature. Navigating through sections was fast and smooth, and the content was rich.</p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="assets/images/reviews/pic-5.png">
+                <h3>Sama Elfishawy</h3>
+                <p>The best experience ever! The website is easy, and the browsing speed is high. I loved being able to see books by ratings and categories. Everything was organized perfectly, and it made shopping a pleasure. I’ll definitely return.</p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="assets/images/reviews/pic-6.jpg">
+                <h3>Yasmin Ramadan</h3>
+                <p>Amazing site! The modern design and excellent interface were the main reasons for the smooth experience. I found all the books I was looking for easily, and the process was fast and secure. It’s the best book fair website I’ve ever used.</p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+</section>
+
+<!-- reviews section ends -->
+      <!-- ======= Footer Section ======= -->
+      <section class="footer">
+        <div class="box-container">
+           <div class="box">
+              <h3>Quick links</h3>
+              <a href="index.html"><i class="fa-solid fa-arrow-right"></i> Home</a>
+              <a href="library.html"><i class="fa-solid fa-arrow-right"></i> New Releases</a>
+              <a href="book-club.html"><i class="fa-solid fa-arrow-right"></i> Book Club</a>
+              <a href="blogs.html"><i class="fa-solid fa-arrow-right"></i> Blog</a>
+              <a href="#contact"><i class="fa-solid fa-arrow-right"></i> Contact</a>
+           </div>
+           <div class="box">
+              <h3>Extra links</h3>
+              <a href="library.html"><i class="fa-solid fa-arrow-right"></i> Search Books</a>
+              <a href="compare.html"><i class="fa-solid fa-arrow-right"></i> Compare Books</a>
+              <a href="store.html"><i class="fa-solid fa-arrow-right"></i> Online Bookstore</a>
+              <a href="index.html#reviews"><i class="fa-solid fa-arrow-right"></i> Reviews & Ratings</a>
+              <a href="Interviews.html"><i class="fa-solid fa-arrow-right"></i> Interviews & Events</a>
+           </div>
+           <div class="box">
+              <h3>Contact info</h3>
+              <a href="tel:+201211774738"><i class="fa-solid fa-phone"></i> +20 1211774738</a>
+              <a href="tel:+201019720641"><i class="fa-solid fa-phone"></i> +20 1019720641</a>
+              <a href="mailto:amr10tuf@gmail.com"><i class="fa-solid fa-envelope"></i> amr10tuf@gmail.com</a>
+              <img src="assets/images/m8olty.png" class="m8olty" />
+           </div>
+        </div>
+        <div class="share">
+           <a href="https://www.linkedin.com/in/amryb/" class="fab fa-linkedin"></a>
+           <a href="https://github.com/AMRYB" class="fa-brands fa-github"></a>
+           <a href="https://www.facebook.com/DrAmryasser" class="fa-brands fa-facebook-f"></a>
+           <a href="https://discord.gg/AMRYB" class="fa-brands fa-discord"></a>
+        </div>
+     </section>
+     <!-- ======= Scripts ======= -->
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+     <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Blog: Why You Should Buy Wahat El-Yakoub ?!</title>
+      <link rel="icon" href="assets/images/logos/MLogo.png" />
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css" />
+      <link rel="stylesheet" href="assets/css/main.css" />
+   </head>
+   <body>
+      <!-- ======= Header Section ======= -->
+      <header class="header">
+         <div class="header-1">
+            <a href="index.html" class="logo">
+            <img src="assets/images/logos/BLogo.png" style="height: 60px;" />
+            </a>
+            <form action="" class="search-form">
+               <input type="search" placeholder="search here..." id="search-box" />
+               <label for="search-box" class="fa-solid fa-search"></label>
+            </form>
+            <div class="icons">
+               <div id="search-btn" class="fa-solid fa-search"></div>
+               <a href="#" class="fa-solid fa-heart"></a>
+               <div id="login-btn" class="fa-thin fa-user"></div>
+            </div>
+         </div>
+         <div class="header-2">
+            <nav class="navbar">
+               <a href="index.html">Home</a>
+               <a href="library.html">New Releases</a>
+               <a href="book-club.html">Book Club</a>
+               <a href="interviews.html">Interview</a>
+               <a href="contact.html">Contact</a>
+            </nav>
+         </div>
+      </header>
+      <!-- ======= Bottom Navigation Bar ======= -->
+      <nav class="bottom-navbar">
+         <a href="index.html" class="fa-solid fa-house-blank"></a>
+         <a href="library.html#featured" class="fa-solid fa-fire"></a>
+         <a href="book-club.html" class="fa-solid fa-books"></a>
+         <a href="interviews.html" class="fa-solid fa-blog"></a>
+         <a href="#Contact" class="fa-solid fa-envelopes"></a>
+      </nav>
+      <!-- ======= Login/Register/Reset Forms ======= -->
+      <div class="login-form-container">
+         <div id="close-login-btn" class="fa-solid fa-times"></div>
+         <!-- Login Form -->
+         <form id="login-form">
+            <h3>sign in</h3>
+            <span>username</span>
+            <input type="email" class="box" placeholder="enter your email" required />
+            <span>password</span>
+            <input type="password" class="box" placeholder="enter your password" required />
+            <div class="checkbox">
+               <input type="checkbox" id="remember-me" />
+               <label for="remember-me"> remember me</label>
+            </div>
+            <input type="submit" value="sign in" class="btn" />
+            <p>Forgotten your password? <a href="#" id="show-reset">Reset Password</a></p>
+            <p>First time? <a href="#" id="show-register">create one</a></p>
+         </form>
+         <!-- Register Form -->
+         <form id="register-form" style="display: none;">
+            <h3>create account</h3>
+            <div class="name-fields">
+               <div>
+                  <span>first name</span>
+                  <input type="text" class="box" placeholder="enter your first name" required />
+               </div>
+               <div>
+                  <span>last name</span>
+                  <input type="text" class="box" placeholder="enter your last name" required />
+               </div>
+            </div>
+            <span>email</span>
+            <input type="email" class="box" placeholder="enter your email" required />
+            <span>password</span>
+            <input type="password" class="box" placeholder="enter your password" required />
+            <input type="submit" value="register" class="btn" />
+            <p>Nah, it's not my first time!! <a href="#" id="show-login">Login</a></p>
+         </form>
+         <!-- Reset Password Form -->
+         <form id="reset-form" style="display: none;">
+            <h3>reset password</h3>
+            <span>your email</span>
+            <input type="email" class="box" placeholder="enter your registered email" required />
+            <input type="submit" value="send reset link" class="btn" />
+            <p id="reset-msg" style="font-size: 1.4rem; text-align:center; display: none;"></p>
+            <p>Remembered your password? <a href="#" id="show-login-again">Login</a></p>
+         </form>
+      </div>
+      <!-- ======= User Menu (Dropdown) ======= -->
+      <div id="user-menu" style="display: none; position: absolute; top: 70px; right: 20px; background: white; border: 1px solid #ccc; border-radius: 5px; padding: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 1000;">
+         <p id="welcome-name" style="margin: 0 0 10px; font-size: 1.5rem; color: #444;"></p>
+         <button onclick="logout()" style="background: var(--pink); color: white; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer;">Logout</button>
+      </div>
+      <!-- ======= (Blog Section) ======= -->
+      <section id="pblog">
+         <div class="blog-content">
+            <h3>Why You Should Buy Wahat El-Yakoub ?!</h3>
+            <div class="blog-post">
+               <p><strong>New Release by Asir Books Publishing</strong></p>
+               <p>Recently released by Asir Books Publishing, "Wahat El-Yakoub" is a new novel by Dr. Amr Abdel Hamid, the author of the bestselling series "Ard Zykola." This novel presents a fresh addition to the fantasy genre that Abdel Hamid is known for, but this time with an element of horror that will take the reader on an extraordinary journey. If you're a fan of fantasy and horror, "Wahat El-Yakoub" is a must-have for your collection.</p>
+            </div>
+            <div class="blog-post">
+               <p><strong>A Glimpse into the Novel</strong></p>
+               <p>The story is set in the heart of a vast desert, where a blink of the eye means death, and the inhabitants of the oasis live a life entwined with fear and legends. The novel delves into the mysterious "Children of the Well" and the secret of the guardian jinn that looms over the story. It's an epic journey that mixes fear, mythology, and challenge, all leading to an inevitable fate. The question is: Will you dare enter Wahat El-Yakoub?</p>
+            </div>
+            <div class="blog-post">
+               <p><strong>The Author and His Unique Style</strong></p>
+               <p>Dr. Amr Abdel Hamid is the renowned Egyptian author known for his success with the "Ard Zykola" series, which proved his ability to craft new and unusual worlds that blend fantasy with reality in an engaging way. In "Wahat El-Yakoub," Abdel Hamid brings his signature fantasy style, but with an added element of horror, making it a thrilling read for fans of both genres.</p>
+            </div>
+            <div class="blog-post">
+               <p><strong>Content and the Challenges It Presents</strong></p>
+               <p>When the novel says that "a blink of the eye means death," it sets the tone of the terrifying atmosphere that fills the oasis. The plot is filled with suspense and mystery, making readers eager to continue reading to uncover what happens next. The Children of the Well, who are central to the plot, will add another layer of intrigue and fear, while the guardian jinn remains an enigma, leading to a captivating unraveling of secrets as the story progresses.</p>
+            </div>
+            <div class="blog-post">
+               <p><strong>Why You Should Buy the Novel</strong></p>
+               <p>1. Diverse Literary Elements: If you love fantasy and horror, this novel gives you a unique blend of both genres.<br>
+                  2. A Unique Writing Style: The author is known for creating engaging adventures and new worlds that combine mythology and suspense in a captivating way.<br>
+                  3. A Fresh Twist: The novel combines elements of fantasy with horror, making it stand out from typical fantasy novels.<br>
+                  4. Wide Availability: Besides the Egyptian edition, the novel will also be available in other Arab countries, making it easily accessible.
+               </p>
+            </div>
+         </div>
+      </section>
+      <!-- ======= Footer Section ======= -->
+      <section class="footer">
+         <div class="box-container">
+            <div class="box">
+               <h3>Quick links</h3>
+               <a href="index.html"><i class="fa-solid fa-arrow-right"></i> Home</a>
+               <a href="library.html"><i class="fa-solid fa-arrow-right"></i> New Releases</a>
+               <a href="book-club.html"><i class="fa-solid fa-arrow-right"></i> Book Club</a>
+               <a href="blogs.html"><i class="fa-solid fa-arrow-right"></i> Blog</a>
+               <a href="contact.html"><i class="fa-solid fa-arrow-right"></i> Contact</a>
+            </div>
+            <div class="box">
+               <h3>Extra links</h3>
+               <a href="library.html"><i class="fa-solid fa-arrow-right"></i> Search Books</a>
+               <a href="compare.html"><i class="fa-solid fa-arrow-right"></i> Compare Books</a>
+               <a href="store.html"><i class="fa-solid fa-arrow-right"></i> Online Bookstore</a>
+               <a href="index.html#reviews"><i class="fa-solid fa-arrow-right"></i> Reviews & Ratings</a>
+               <a href="interviews.html"><i class="fa-solid fa-arrow-right"></i> Interviews & Events</a>
+            </div>
+            <div class="box">
+               <h3>Contact info</h3>
+               <a href="tel:+201211774738"><i class="fa-solid fa-phone"></i> +20 1211774738</a>
+               <a href="tel:+201019720641"><i class="fa-solid fa-phone"></i> +20 1019720641</a>
+               <a href="mailto:amr10tuf@gmail.com"><i class="fa-solid fa-envelope"></i> amr10tuf@gmail.com</a>
+               <img src="assets/images/m8olty.png" class="m8olty" />
+            </div>
+         </div>
+         <div class="share">
+            <a href="https://www.linkedin.com/in/amryb/" class="fab fa-linkedin"></a>
+            <a href="https://github.com/AMRYB" class="fa-brands fa-github"></a>
+            <a href="https://www.facebook.com/DrAmryasser" class="fa-brands fa-facebook-f"></a>
+            <a href="https://discord.gg/AMRYB" class="fa-brands fa-discord"></a>
+         </div>
+      </section>
+      <!-- ======= Scripts ======= -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>

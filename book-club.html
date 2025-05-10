@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Book Club</title>
+      <link rel="icon" href="assets/images/logos/MLogo.png" />
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css" />
+      <link rel="stylesheet" href="assets/css/main.css" />
+   </head>
+   <body>
+      <!-- ======= Header Section ======= -->
+      <header class="header">
+         <div class="header-1">
+            <a href="index.html" class="logo">
+            <img src="assets/images/logos/BLogo.png" style="height: 60px;" />
+            </a>
+            <form action="" class="search-form">
+               <input type="search" placeholder="search here..." id="search-box" />
+               <label for="search-box" class="fa-solid fa-search"></label>
+            </form>
+            <div class="icons">
+               <div id="search-btn" class="fa-solid fa-search"></div>
+               <a href="#" class="fa-solid fa-heart"></a>
+               <div id="login-btn" class="fa-thin fa-user"></div>
+            </div>
+         </div>
+         <div class="header-2">
+            <nav class="navbar">
+               <a href="index.html">Home</a>
+               <a href="library.html">New Releases</a>
+               <a href="book-club.html">Book Club</a>
+               <a href="#">Interview</a>
+               <a href="contact.html">Contact</a>
+            </nav>
+         </div>
+      </header>
+      <!-- ======= Bottom Navigation Bar ======= -->
+      <nav class="bottom-navbar">
+         <a href="index.html" class="fa-solid fa-house-blank"></a>
+         <a href="library.html#featured" class="fa-solid fa-fire"></a>
+         <a href="book-club.html" class="fa-solid fa-books"></a>
+         <a href="interviews.html" class="fa-solid fa-blog"></a>
+         <a href="#Contact" class="fa-solid fa-envelopes"></a>
+      </nav>
+      <!-- ======= Login/Register/Reset Forms ======= -->
+      <div class="login-form-container">
+         <div id="close-login-btn" class="fa-solid fa-times"></div>
+         <!-- Login Form -->
+         <form id="login-form">
+            <h3>sign in</h3>
+            <span>username</span>
+            <input type="email" class="box" placeholder="enter your email" required />
+            <span>password</span>
+            <input type="password" class="box" placeholder="enter your password" required />
+            <div class="checkbox">
+               <input type="checkbox" id="remember-me" />
+               <label for="remember-me"> remember me</label>
+            </div>
+            <input type="submit" value="sign in" class="btn" />
+            <p>Forgotten your password? <a href="#" id="show-reset">Reset Password</a></p>
+            <p>First time? <a href="#" id="show-register">create one</a></p>
+         </form>
+         <!-- Register Form -->
+         <form id="register-form" style="display: none;">
+            <h3>create account</h3>
+            <div class="name-fields">
+               <div>
+                  <span>first name</span>
+                  <input type="text" class="box" placeholder="enter your first name" required />
+               </div>
+               <div>
+                  <span>last name</span>
+                  <input type="text" class="box" placeholder="enter your last name" required />
+               </div>
+            </div>
+            <span>email</span>
+            <input type="email" class="box" placeholder="enter your email" required />
+            <span>password</span>
+            <input type="password" class="box" placeholder="enter your password" required />
+            <input type="submit" value="register" class="btn" />
+            <p>Nah, it's not my first time!! <a href="#" id="show-login">Login</a></p>
+         </form>
+         <!-- Reset Password Form -->
+         <form id="reset-form" style="display: none;">
+            <h3>reset password</h3>
+            <span>your email</span>
+            <input type="email" class="box" placeholder="enter your registered email" required />
+            <input type="submit" value="send reset link" class="btn" />
+            <p id="reset-msg" style="font-size: 1.4rem; text-align:center; display: none;"></p>
+            <p>Remembered your password? <a href="#" id="show-login-again">Login</a></p>
+         </form>
+      </div>
+      <!-- ======= User Menu (Dropdown) ======= -->
+      <div id="user-menu" style="display: none; position: absolute; top: 70px; right: 20px; background: white; border: 1px solid #ccc; border-radius: 5px; padding: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 1000;">
+         <p id="welcome-name" style="margin: 0 0 10px; font-size: 1.5rem; color: #444;"></p>
+         <button onclick="logout()" style="background: var(--pink); color: white; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer;">Logout</button>
+      </div>
+      <!-- ======= Community Section ======= -->
+      <section class="home" id="home">
+         <div class="row">
+            <div class="content">
+               <h3>Find your book community.</h3>
+               <p>Looking for a book club? Whether you want to connect over brunch or booze, explore history, cozy up with a mystery, explore other cultures, become more mindful, or find support, there's a club out there for you. Explore dozens of online book clubs or find a book club near you.</p>
+               <a href="#" class="btn">Join a Book club</a>
+            </div>
+            <div class="book-club-image">
+               <img src="assets/images/book club.png">
+            </div>
+         </div>
+      </section>
+      <!-- ======= Icons Section ======= -->
+      <section class="icons-container">
+         <div class="icons">
+            <i class="fa-solid fa-ranking-star"></i>
+            <div class="content">
+               <h3>Top-rated books</h3>
+               <p>reviewed by our readers</p>
+            </div>
+         </div>
+         <div class="icons">
+            <i class="fa-solid fa-user-group"></i>
+            <div class="content">
+               <h3>Reader Community</h3>
+               <p>Join book lovers and share!!</p>
+            </div>
+         </div>
+         <div class="icons">
+            <i class="fa-solid fa-book-open-reader"></i>
+            <div class="content">
+               <h3>Monthly picks</h3>
+               <p>Enjoy a new book every month</p>
+            </div>
+         </div>
+         <div class="icons">
+            <i class="fa-solid fa-gifts"></i>
+            <div class="content">
+               <h3>Member rewards</h3>
+               <p>Gifts and perks just for you</p>
+            </div>
+         </div>
+      </section>
+      <!-- ======= Book Club Section ======= -->
+      <section class="book-club" id="book-club">
+         <h1 class="heading"> <span>Book Clubs</span> </h1>
+         <div class="swiper book-club-slider">
+            <div class="swiper-wrapper">
+               <a href="#" class="swiper-slide box">
+                  <div class="image">
+                     <img src="assets/images/books/12497.jpg">
+                  </div>
+                  <div class="content">
+                     <h3>ElQari2 ElZaki</h3>
+                     <div class="price">1k Member</div>
+                     <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                     </div>
+                  </div>
+               </a>
+               <a href="#" class="swiper-slide box">
+                  <div class="image">
+                     <img src="assets/images/books/12627.jpg">
+                  </div>
+                  <div class="content">
+                     <h3>Ketabna</h3>
+                     <div class="price">562 Member</div>
+                     <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                     </div>
+                  </div>
+               </a>
+               <a href="#" class="swiper-slide box">
+                  <div class="image">
+                     <img src="assets/images/books/16310.jpg">
+                  </div>
+                  <div class="content">
+                     <h3>Bookiaty</h3>
+                     <div class="price">380 Member</div>
+                     <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                     </div>
+                  </div>
+               </a>
+               <a href="#" class="swiper-slide box">
+                  <div class="image">
+                     <img src="assets/images/books/12351.jpeg">
+                  </div>
+                  <div class="content">
+                     <h3>ElMaktaba</h3>
+                     <div class="price">1.2k Member</div>
+                     <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                     </div>
+                  </div>
+               </a>
+               <a href="#" class="swiper-slide box">
+                  <div class="image">
+                     <img src="assets/images/books/19096.jpg">
+                  </div>
+                  <div class="content">
+                     <h3>Sahret Ketab</h3>
+                     <div class="price">951 Member</span></div>
+                     <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                     </div>
+                  </div>
+               </a>
+            </div>
+         </div>
+         <div class="swiper book-club-slider">
+            <div class="swiper-wrapper">
+               <a href="#" class="swiper-slide box">
+                  <div class="image">
+                     <img src="assets/images/books/19184.jpg">
+                  </div>
+                  <div class="content">
+                     <h3>3ash2 El Qera2a</h3>
+                     <div class="price">951 Member</span></div>
+                     <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                     </div>
+                  </div>
+               </a>
+               <a href="#" class="swiper-slide box">
+                  <div class="image">
+                     <img src="assets/images/books/16853.jpg">
+                  </div>
+                  <div class="content">
+                     <h3>Rawa2 Book Club</h3>
+                     <div class="price">346 Member</span></div>
+                     <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                     </div>
+                  </div>
+               </a>
+               <a href="#" class="swiper-slide box">
+                  <div class="image">
+                     <img src="assets/images/books/13241.png">
+                  </div>
+                  <div class="content">
+                     <h3>Fekra w 7arf</h3>
+                     <div class="price">2k Member</span></div>
+                     <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                     </div>
+                  </div>
+               </a>
+               <a href="#" class="swiper-slide box">
+                  <div class="image">
+                     <img src="assets/images/books/12141.jpg">
+                  </div>
+                  <div class="content">
+                     <h3>ElMaktaba</h3>
+                     <div class="price">981 Member</span></div>
+                     <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                     </div>
+                  </div>
+               </a>
+               <a href="#" class="swiper-slide box">
+                  <div class="image">
+                     <img src="assets/images/books/19996.jpg">
+                  </div>
+                  <div class="content">
+                     <h3>Noor w Ketab</h3>
+                     <div class="price">460 Member</span></div>
+                     <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                     </div>
+                  </div>
+               </a>
+            </div>
+         </div>
+      </section>
+      <!-- ======= Deal Section ======= -->
+      <section class="deal">
+         <div class="content">
+            <h3>Tired of the same old routine?</h3>
+            <h1>Step out and explore the world!!</h1>
+            <p>You can now join a real-life Book Club – just fill out the form, and we’ll get in touch soon.
+               Meet new people, share your thoughts, and connect over your favorite books.
+            </p>
+            <a href="#" class="btn">Apply Now</a>
+         </div>
+         <div class="image">
+            <img src="assets/images/deal-img.jpg">
+         </div>
+      </section>
+      <!-- ======= Footer Section ======= -->
+      <section class="footer">
+         <div class="box-container">
+            <div class="box">
+               <h3>Quick links</h3>
+               <a href="index.html"><i class="fa-solid fa-arrow-right"></i> Home</a>
+               <a href="library.html"><i class="fa-solid fa-arrow-right"></i> New Releases</a>
+               <a href="book-club.html"><i class="fa-solid fa-arrow-right"></i> Book Club</a>
+               <a href="blogs.html"><i class="fa-solid fa-arrow-right"></i> Blog</a>
+               <a href="contact.html"><i class="fa-solid fa-arrow-right"></i> Contact</a>
+            </div>
+            <div class="box">
+               <h3>Extra links</h3>
+               <a href="library.html"><i class="fa-solid fa-arrow-right"></i> Search Books</a>
+               <a href="compare.html"><i class="fa-solid fa-arrow-right"></i> Compare Books</a>
+               <a href="store.html"><i class="fa-solid fa-arrow-right"></i> Online Bookstore</a>
+               <a href="index.html#reviews"><i class="fa-solid fa-arrow-right"></i> Reviews & Ratings</a>
+               <a href="#interview"><i class="fa-solid fa-arrow-right"></i> Interviews & Events</a>
+            </div>
+            <div class="box">
+               <h3>Contact info</h3>
+               <a href="tel:+201211774738"><i class="fa-solid fa-phone"></i> +20 1211774738</a>
+               <a href="tel:+201019720641"><i class="fa-solid fa-phone"></i> +20 1019720641</a>
+               <a href="mailto:amr10tuf@gmail.com"><i class="fa-solid fa-envelope"></i> amr10tuf@gmail.com</a>
+               <img src="assets/images/m8olty.png" class="m8olty" />
+            </div>
+         </div>
+         <div class="share">
+            <a href="https://www.linkedin.com/in/amryb/" class="fab fa-linkedin"></a>
+            <a href="https://github.com/AMRYB" class="fa-brands fa-github"></a>
+            <a href="https://www.facebook.com/DrAmryasser" class="fa-brands fa-facebook-f"></a>
+            <a href="https://discord.gg/AMRYB" class="fa-brands fa-discord"></a>
+         </div>
+      </section>
+      <!-- ======= Scripts ======= -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Blogs</title>
+      <link rel="icon" href="assets/images/logos/MLogo.png" />
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css" />
+      <link rel="stylesheet" href="assets/css/main.css" />
+   </head>
+   <body>
+      <!-- ======= Header Section ======= -->
+      <header class="header">
+         <div class="header-1">
+            <a href="index.html" class="logo">
+            <img src="assets/images/logos/BLogo.png" style="height: 60px;" />
+            </a>
+            <form action="" class="search-form">
+               <input type="search" placeholder="search here..." id="search-box" />
+               <label for="search-box" class="fa-solid fa-search"></label>
+            </form>
+            <div class="icons">
+               <div id="search-btn" class="fa-solid fa-search"></div>
+               <a href="#" class="fa-solid fa-heart"></a>
+               <div id="login-btn" class="fa-thin fa-user"></div>
+            </div>
+         </div>
+         <div class="header-2">
+            <nav class="navbar">
+               <a href="index.html">Home</a>
+               <a href="library.html">New Releases</a>
+               <a href="book-club.html">Book Club</a>
+               <a href="interviews.html">Interview</a>
+               <a href="contact.html">Contact</a>
+            </nav>
+         </div>
+      </header>
+      <!-- ======= Bottom Navigation Bar ======= -->
+      <nav class="bottom-navbar">
+         <a href="index.html" class="fa-solid fa-house-blank"></a>
+         <a href="library.html#featured" class="fa-solid fa-fire"></a>
+         <a href="book-club.html" class="fa-solid fa-books"></a>
+         <a href="interviews.html" class="fa-solid fa-blog"></a>
+         <a href="#Contact" class="fa-solid fa-envelopes"></a>
+      </nav>
+      <!-- ======= Login/Register/Reset Forms ======= -->
+      <div class="login-form-container">
+         <div id="close-login-btn" class="fa-solid fa-times"></div>
+         <!-- Login Form -->
+         <form id="login-form">
+            <h3>sign in</h3>
+            <span>username</span>
+            <input type="email" class="box" placeholder="enter your email" required />
+            <span>password</span>
+            <input type="password" class="box" placeholder="enter your password" required />
+            <div class="checkbox">
+               <input type="checkbox" id="remember-me" />
+               <label for="remember-me"> remember me</label>
+            </div>
+            <input type="submit" value="sign in" class="btn" />
+            <p>Forgotten your password? <a href="#" id="show-reset">Reset Password</a></p>
+            <p>First time? <a href="#" id="show-register">create one</a></p>
+         </form>
+         <!-- Register Form -->
+         <form id="register-form" style="display: none;">
+            <h3>create account</h3>
+            <div class="name-fields">
+               <div>
+                  <span>first name</span>
+                  <input type="text" class="box" placeholder="enter your first name" required />
+               </div>
+               <div>
+                  <span>last name</span>
+                  <input type="text" class="box" placeholder="enter your last name" required />
+               </div>
+            </div>
+            <span>email</span>
+            <input type="email" class="box" placeholder="enter your email" required />
+            <span>password</span>
+            <input type="password" class="box" placeholder="enter your password" required />
+            <input type="submit" value="register" class="btn" />
+            <p>Nah, it's not my first time!! <a href="#" id="show-login">Login</a></p>
+         </form>
+         <!-- Reset Password Form -->
+         <form id="reset-form" style="display: none;">
+            <h3>reset password</h3>
+            <span>your email</span>
+            <input type="email" class="box" placeholder="enter your registered email" required />
+            <input type="submit" value="send reset link" class="btn" />
+            <p id="reset-msg" style="font-size: 1.4rem; text-align:center; display: none;"></p>
+            <p>Remembered your password? <a href="#" id="show-login-again">Login</a></p>
+         </form>
+      </div>
+      <!-- ======= User Menu (Dropdown) ======= -->
+      <div id="user-menu" style="display: none; position: absolute; top: 70px; right: 20px; background: white; border: 1px solid #ccc; border-radius: 5px; padding: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 1000;">
+         <p id="welcome-name" style="margin: 0 0 10px; font-size: 1.5rem; color: #444;"></p>
+         <button onclick="logout()" style="background: var(--pink); color: white; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer;">Logout</button>
+      </div>
+      <!-- ======= Blogs Section ======= -->
+      <section class="blogs" id="blogs">
+         <h1 class="heading"> <span>Our Blogs</span> </h1>
+         <div class="swiper blogs-slider">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="assets/images/blogs/blog-1.jpg">
+                  </div>
+                  <div class="content">
+                     <h3>Why You Should Buy Wahat El-Yakoub ?!</h3>
+                     <p>This article talks about the new novel "Wahat El-Yakoub" by Amr Abdel Hamid, explaining why it’s worth reading. It highlights the book’s unique blend of fantasy and horror, focusing on its intriguing plot and deep themes of fear, mythology, and challenges. The article also discusses the author’s style and why this book will appeal to fans of adventure and suspense.</p>
+                     <a href="blog1.html" class="btn">read more</a>
+                  </div>
+               </div>
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="assets/images/blogs/blog-2.jpg">
+                  </div>
+                  <div class="content">
+                     <h3>Is Yasmeen Al-Awda Better or The Earlier Part: Ghurbat Al-Yasmeen?</h3>
+                     <p>This article compares the two titles "Yasmeen Al-Awda" and "The Earlier Part: Ghurbat Al-Yasmeen". It explores the pros and cons of each title and discusses which one might be more attractive to readers, depending on whether they’re looking for a fresh start or a continuation of the story.</p>
+                     <a href="blog2.html" class="btn">read more</a>
+                  </div>
+               </div>
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="assets/images/blogs/blog-3.jpg">
+                  </div>
+                  <div class="content">
+                     <h3>Does Part Five of The Monster Inside You Can Be Gentle Really Cure the Fear of Rejection?</h3>
+                     <p>This article examines Part Five of the book "The Monster Inside You Can Be Gentle" and whether it helps overcome the fear of rejection. It explains how the section offers a deeper understanding of the fear, helping readers face it with compassion and live with it, rather than trying to eliminate it entirely.</p>
+                     <a href="blog3.html" class="btn">read more</a>
+                  </div>
+               </div>
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="assets/images/blogs/blog-4.jpg">
+                  </div>
+                  <div class="content">
+                     <h3>Making Time: How to Create More Time from the Available Hours</h3>
+                     <p>This article explores practical strategies and mindset shifts for creating more time in our busy lives. It provides tips on time management, productivity hacks, and ways to make the most out of each day, even when it feels like there’s never enough time. The focus is on being intentional with how we spend our time and finding ways to make more time for the things that matter most.</p>
+                     <a href="blog4.html" class="btn">read more</a>
+                  </div>
+               </div>
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="assets/images/blogs/blog-5.jpg">
+                  </div>
+                  <div class="content">
+                     <h3>Does Reading How to Do What You Don’t Like Really Help You Do What You Hate?</h3>
+                     <p>This article reviews "How to Do What You Don’t Like" and discusses whether it truly helps readers tackle tasks they avoid. It explores the book's strategies for overcoming procrastination and reframing how we approach unpleasant tasks, questioning if reading it can really lead to action.</p>
+                     <a href="blog5.html" class="btn">read more</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- ======= Footer Section ======= -->
+      <section class="footer">
+         <div class="box-container">
+            <div class="box">
+               <h3>Quick links</h3>
+               <a href="index.html"><i class="fa-solid fa-arrow-right"></i> Home</a>
+               <a href="library.html"><i class="fa-solid fa-arrow-right"></i> New Releases</a>
+               <a href="book-club.html"><i class="fa-solid fa-arrow-right"></i> Book Club</a>
+               <a href="#blogs"><i class="fa-solid fa-arrow-right"></i> Blog</a>
+               <a href="contact.html"><i class="fa-solid fa-arrow-right"></i> Contact</a>
+            </div>
+            <div class="box">
+               <h3>Extra links</h3>
+               <a href="library.html"><i class="fa-solid fa-arrow-right"></i> Search Books</a>
+               <a href="compare.html"><i class="fa-solid fa-arrow-right"></i> Compare Books</a>
+               <a href="store.html"><i class="fa-solid fa-arrow-right"></i> Online Bookstore</a>
+               <a href="index.html#reviews"><i class="fa-solid fa-arrow-right"></i> Reviews & Ratings</a>
+               <a href="interviews.html"><i class="fa-solid fa-arrow-right"></i> Interviews & Events</a>
+            </div>
+            <div class="box">
+               <h3>Contact info</h3>
+               <a href="tel:+201211774738"><i class="fa-solid fa-phone"></i> +20 1211774738</a>
+               <a href="tel:+201019720641"><i class="fa-solid fa-phone"></i> +20 1019720641</a>
+               <a href="mailto:amr10tuf@gmail.com"><i class="fa-solid fa-envelope"></i> amr10tuf@gmail.com</a>
+               <img src="assets/images/m8olty.png" class="m8olty" />
+            </div>
+         </div>
+         <div class="share">
+            <a href="https://www.linkedin.com/in/amryb/" class="fab fa-linkedin"></a>
+            <a href="https://github.com/AMRYB" class="fa-brands fa-github"></a>
+            <a href="https://www.facebook.com/DrAmryasser" class="fa-brands fa-facebook-f"></a>
+            <a href="https://discord.gg/AMRYB" class="fa-brands fa-discord"></a>
+         </div>
+      </section>
+      <!-- ======= Scripts ======= -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>
