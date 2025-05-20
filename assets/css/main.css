@@ -484,7 +484,7 @@ section {
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-	background: var(--black);
+	background: var(--blue);
 	color: #fff;
 }
 
@@ -518,7 +518,8 @@ section {
 	border-radius: .5rem;
 	text-transform: none;
 }
-
+/*check start*/
+/*check end*/
 .book-club .book-club-slider .box {
 	display: flex;
 	align-items: center;
@@ -770,7 +771,7 @@ section {
 	background: var(--pink);
 }
 
-/*Author Interview*/
+/*Author interview*/
 #pinterview {
 	padding: 3rem 5%;
 	background-color: #f9f9f9;
@@ -802,7 +803,7 @@ section {
 	font-weight: bold;
 }
 
-/*Author Interviews & Events*/
+/*Author interviews & Events*/
 .interview .interview-slider .box {
 	margin: 2rem 0;
 	border: var(--border);
@@ -898,7 +899,7 @@ section {
 }
 
 .footer .share a:hover {
-	background: var(--black);
+	background: var(--blue);
 }
 
 /* media queries  */
