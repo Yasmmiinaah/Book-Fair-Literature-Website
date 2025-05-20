@@ -4,7 +4,7 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Blog: Does Reading How to Do What You Don’t Like Really Help You Do What You Hate?</title>
+      <title>Cinderella Is Dead</title>
       <link rel="icon" href="assets/images/logos/MLogo.png" />
       <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
       <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css" />
@@ -32,7 +32,7 @@
                <a href="library.html">New Releases</a>
                <a href="book-club.html">Book Club</a>
                <a href="interviews.html">interview</a>
-               <a href="contact.html">Contact</a>
+               <a href="#">Contact</a>
             </nav>
          </div>
       </header>
@@ -98,32 +98,40 @@
          <a href="favorite.html" style="display: block; margin-bottom: 10px; font-size: 1.4rem; color: #444; text-decoration: none;">My Favorites</a>
          <button onclick="logout()" style="background: var(--pink); color: white; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer;">Logout</button>
       </div>
-      <!-- ======= (Blog Section) ======= -->
-      <section id="pblog">
-         <div class="blog-content">
-            <h3>Does Reading How to Do What You Don’t Like Really Help You Do What You Hate?</h3>
-            <div class="blog-post">
-               <p><strong>The Struggle of Avoiding What You Dislike</strong></p>
-               <p>We all have tasks we tend to avoid — whether it's work, chores, or personal goals. The book "How to Do What You Don’t Like" promises to help us break through that resistance and actually do what we hate. But the real question is: does it live up to its promise? Can reading this book actually make us take action on things we've been procrastinating for months?</p>
-            </div>
-            <div class="blog-post">
-               <p><strong>Understanding the Book's Core Message</strong></p>
-               <p>The book explores the psychological reasons behind why we avoid certain tasks, emphasizing the role of fear, anxiety, and discomfort. It encourages readers to reframe their mindset about tasks they dislike, showing them how to break down the tasks into smaller, more manageable steps. It also suggests techniques for building motivation, such as using rewards or developing habits to ease into unpleasant tasks.</p>
-            </div>
-            <div class="blog-post">
-               <p><strong>What You Will Gain from the Book</strong></p>
-               <p>One of the key takeaways from the book is that procrastination often stems from emotional discomfort rather than laziness. By addressing this discomfort and changing our relationship with tasks we dislike, the book shows how we can become more productive and less stressed. Practical exercises are offered to help you tackle these tasks in a step-by-step manner, which can be particularly useful for readers who feel overwhelmed by large projects.</p>
-            </div>
-            <div class="blog-post">
-               <p><strong>Does It Really Work?</strong></p>
-               <p>While the book provides useful strategies for tackling difficult tasks, the ultimate success depends on how committed you are to applying the techniques. Simply reading the book won’t magically make you love doing what you don’t like. It’s about consistent effort, reframing your mindset, and gradually taking small actions. The key takeaway is that change comes from within, and no book can do the work for you.</p>
-            </div>
-            <div class="blog-post">
-               <p><strong>Conclusion: A Helpful Tool, But Only If You Use It</strong></p>
-               <p>In the end, reading "How to Do What You Don’t Like" can be a powerful first step toward overcoming procrastination and tackling tasks you’ve been avoiding. However, to see real results, it’s up to you to take action and implement the techniques provided. It’s not about magically doing what you hate, but about changing your approach and mindset to take control of the things you’ve been putting off.</p>
-            </div>
+
+      <!-- المؤلف -->
+      <div class="author-section">
+         <img src="assets/images/reviews/pic-1.jpg" class="author-img" alt="Author Image">
+         <div class="author-info">
+            <h3>Mark Haddon</h3>
+            <p>76 books • 3,918 followers</p>
          </div>
-      </section>
+      </div>
+      <p class="author-bio">
+         Mark Haddon is an English novelist, best known for The Curious Incident of the Dog in the Night-Time (2003). He won the Whitbread Award, the Dolly Gray Children's Literature Award, the Guardian Prize, and a Commonwealth Writers Prize for his work.
+      </p>
+      <hr>
+      <!-- التقييم والمراجعة -->
+      <div class="rating-section">
+         <h3>Ratings & Reviews</h3>
+         <div class="star-rating" onmouseleave="resetStars()">
+            <i class="fa-regular fa-star" onclick="rate(1)" onmouseover="highlight(1)"></i>
+            <i class="fa-regular fa-star" onclick="rate(2)" onmouseover="highlight(2)"></i>
+            <i class="fa-regular fa-star" onclick="rate(3)" onmouseover="highlight(3)"></i>
+            <i class="fa-regular fa-star" onclick="rate(4)" onmouseover="highlight(4)"></i>
+            <i class="fa-regular fa-star" onclick="rate(5)" onmouseover="highlight(5)"></i>
+         </div>
+         <textarea class="review-box" placeholder="Write your review here..." id="user-review"></textarea>
+         <button class="btn" onclick="submitReview()">Submit</button>
+         <div class="reviews-list" id="reviews-list">
+            <div class="review-item"><strong>Sarah M.:</strong> Loved the twist! Very empowering. ⭐⭐⭐⭐⭐</div>
+            <div class="review-item"><strong>Ali R.:</strong> Great message, but a bit slow in the middle. ⭐⭐⭐⭐</div>
+            <div class="review-item"><strong>Lina T.:</strong> Amazing reimagining of Cinderella! ⭐⭐⭐⭐⭐</div>
+            <div class="review-item"><strong>Kareem A.:</strong> Unique and fresh. Definitely worth reading. ⭐⭐⭐⭐</div>
+            <div class="review-item"><strong>Noha H.:</strong> Loved the characters and pacing. ⭐⭐⭐⭐⭐</div>
+            <div class="review-item"><strong>Youssef F.:</strong> Powerful story. A modern fairy tale. ⭐⭐⭐⭐</div>
+         </div>
+      </div>
       <!-- ======= Footer Section ======= -->
       <section class="footer">
          <div class="box-container">
@@ -133,7 +141,7 @@
                <a href="library.html"><i class="fa-solid fa-arrow-right"></i> New Releases</a>
                <a href="book-club.html"><i class="fa-solid fa-arrow-right"></i> Book Club</a>
                <a href="blogs.html"><i class="fa-solid fa-arrow-right"></i> Blog</a>
-               <a href="contact.html"><i class="fa-solid fa-arrow-right"></i> Contact</a>
+               <a href="#contact"><i class="fa-solid fa-arrow-right"></i> Contact</a>
             </div>
             <div class="box">
                <h3>Extra links</h3>
