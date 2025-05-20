@@ -343,9 +343,50 @@ window.onload = () => {
 
    fadeOut();
 };
+/*
+let currentRating = 0;
 
+function highlight(stars) {
+  const starsList = document.querySelectorAll('.star-rating i');
+  starsList.forEach((star, index) => {
+    star.classList.toggle('fa-solid', index < stars);
+    star.classList.toggle('fa-regular', index >= stars);
+    if (index < stars) star.classList.add('active');
+    else star.classList.remove('active');
+  });
+}
+
+function resetStars() {
+  highlight(currentRating);
+}
+
+function rate(stars) {
+  currentRating = stars;
+  highlight(currentRating);
+}
+function submitReview() {
+  const reviewBox = document.getElementById("user-review");
+  const reviewText = reviewBox.value.trim();
+  if (reviewText === "") {
+    alert("Please write a review before submitting.");
+    return;
+  }
+
+  const stars = currentRating || 0;
+  const starsIcons = "⭐".repeat(stars);
+  const newReview = document.createElement("div");
+  newReview.className = "review-item";
+  newReview.innerHTML = `<strong>You:</strong> ${reviewText} ${starsIcons}`;
+
+  const list = document.getElementById("reviews-list");
+  list.prepend(newReview);
+
+  reviewBox.value = "";
+  currentRating = 0;
+  resetStars();
+}
+*/
 document.querySelector('.contact-form').addEventListener('submit', function (event) {
    event.preventDefault();
-   // You can handle form submission here, e.g., using AJAX
    alert('Your message has been successfully sent!');
 });
