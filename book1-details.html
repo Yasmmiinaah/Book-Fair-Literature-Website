@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Book Details</title>
+      <link rel="icon" href="assets/images/logos/MLogo.png" />
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css" />
+      <link rel="stylesheet" href="assets/css/main.css" />
+   </head>
+   <body>
+      <!-- ======= Header Section ======= -->
+      <header class="header">
+         <div class="header-1">
+            <a href="index.html" class="logo">
+            <img src="assets/images/logos/BLogo.png" style="height: 60px;" />
+            </a>
+            <form action="" class="search-form">
+               <input type="search" placeholder="search here..." id="search-box" />
+               <label for="search-box" class="fa-regular fa-search"></label>
+            </form>
+            <div class="icons">
+               <div id="search-btn" class="fa-regular fa-bookmark"></div>
+               <div id="login-btn" class="fa-thin fa-user"></div>
+            </div>
+         </div>
+         <div class="header-2">
+            <nav class="navbar">
+               <a href="index.html">Home</a>
+               <a href="library.html">New Releases</a>
+               <a href="book-club.html">Book Club</a>
+               <a href="interviews.html">interview</a>
+               <a href="contact.html">Contact</a>
+            </nav>
+         </div>
+      </header>
+      <!-- ======= Bottom Navigation Bar ======= -->
+      <nav class="bottom-navbar">
+         <a href="index.html" class="fa-solid fa-house-blank"></a>
+         <a href="library.html#featured" class="fa-solid fa-fire"></a>
+         <a href="book-club.html" class="fa-solid fa-books"></a>
+         <a href="interviews.html" class="fa-solid fa-blog"></a>
+         <a href="#Contact" class="fa-solid fa-envelopes"></a>
+      </nav>
+      <!-- ======= Login/Register/Reset Forms ======= -->
+      <div class="login-form-container">
+         <div id="close-login-btn" class="fa-solid fa-times"></div>
+         <!-- Login Form -->
+         <form id="login-form">
+            <h3>sign in</h3>
+            <span>username</span>
+            <input type="email" class="box" placeholder="enter your email" required />
+            <span>password</span>
+            <input type="password" class="box" placeholder="enter your password" required />
+            <div class="checkbox">
+               <input type="checkbox" id="remember-me" />
+               <label for="remember-me"> remember me</label>
+            </div>
+            <input type="submit" value="sign in" class="btn" />
+            <p>Forgotten your password? <a href="#" id="show-reset">Reset Password</a></p>
+            <p>First time? <a href="#" id="show-register">create one</a></p>
+         </form>
+         <!-- Register Form -->
+         <form id="register-form" style="display: none;">
+            <h3>create account</h3>
+            <div class="name-fields">
+               <div>
+                  <span>first name</span>
+                  <input type="text" class="box" placeholder="enter your first name" required />
+               </div>
+               <div>
+                  <span>last name</span>
+                  <input type="text" class="box" placeholder="enter your last name" required />
+               </div>
+            </div>
+            <span>email</span>
+            <input type="email" class="box" placeholder="enter your email" required />
+            <span>password</span>
+            <input type="password" class="box" placeholder="enter your password" required />
+            <input type="submit" value="register" class="btn" />
+            <p>Nah, it's not my first time!! <a href="#" id="show-login">Login</a></p>
+         </form>
+         <!-- Reset Password Form -->
+         <form id="reset-form" style="display: none;">
+            <h3>reset password</h3>
+            <span>your email</span>
+            <input type="email" class="box" placeholder="enter your registered email" required />
+            <input type="submit" value="send reset link" class="btn" />
+            <p id="reset-msg" style="font-size: 1.4rem; text-align:center; display: none;"></p>
+            <p>Remembered your password? <a href="#" id="show-login-again">Login</a></p>
+         </form>
+      </div>
+      <!-- ======= User Menu (Dropdown) ======= -->
+      <div id="user-menu" style="display: none; position: absolute; top: 70px; right: 20px; background: white; border: 1px solid #ccc; border-radius: 5px; padding: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 1000;">
+         <p id="welcome-name" style="margin: 0 0 10px; font-size: 1.5rem; color: #444;"></p>
+         <a href="favorite.html" style="display: block; margin-bottom: 10px; font-size: 1.4rem; color: #444; text-decoration: none;">My Favorites</a>
+         <button onclick="logout()" style="background: var(--pink); color: white; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer;">Logout</button>
+      </div>
+      <!-- ======= Book Details Section ======= -->
+      <section class="book-details-section">
+         <div class="container">
+            <!-- Book Details Display -->
+            <div class="book-details">
+               <div class="book-image">
+                  <img src="assets/images/boooks/book-10.png" alt="Book Cover">
+               </div>
+               <div class="book-info">
+                  <h2>Cinderella Is Dead</h2>
+                  <div class="author">By Kalynn Bayron</div>
+                  <div class="rating">
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-regular fa-star"></i>
+                     <i class="fa-regular fa-star"></i>
+                     <span>(3/5 - 328 reviews)</span>
+                  </div>
+                  <div class="pricing">
+                     <span class="price-original">$12.31</span>
+                     <span class="price-discount">$19.47</span>
+                     <span class="save">Save 37%</span>
+                  </div>
+                  <div class="action-buttons">
+                     <button class="btn">Add to Cart</button>
+                     <button class="btn btn-favorite" id="bookmark-btn">
+                     <i class="fa-regular fa-bookmark"></i> Bookmark
+                     </button>
+                  </div>
+                  <div class="social-share">
+                     <p>Share:</p>
+                     <div class="social-icons">
+                        <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Book Description -->
+            <div class="book-description">
+               <h3>Description</h3>
+               <p>It's 200 years since Cinderella found her prince, but the fairytale is over.</p>
+               <p>Sophia knows the story though, off by heart. Because every girl has to recite it daily, from when she's tiny until the night she's sent to the royal ball for choosing. And every girl knows that she has only one chance. For the lives of those not chosen by a man at the ball . are forfeit.</p>
+               <p>But Sophia doesn't want to be chosen - she's in love with her best friend, Erin, and hates the idea of being traded like cattle. And when Sophia's night at the ball goes horribly wrong, she must run for her life. Alone and terrified, she finds herself hiding in Cinderella's tomb. And there she meets someone who will show her that she has the power to remake her world.</p>
+            </div>
+            <!-- Tabs Section -->
+            <div class="book-details-tabs">
+               <div class="tabs">
+                  <button class="tab-button active" data-tab="publishers">Publishers & Locations</button>
+                  <button class="tab-button" data-tab="compare">Compare Prices</button>
+                  <button class="tab-button" data-tab="reviews">Customer Reviews</button>
+               </div>
+               <!-- Publishers Tab -->
+               <div class="tab-content active" id="publishers">
+                  <div class="publishers">
+                     <div class="publisher">
+                        <h4>Dar Dawen</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> Cairo, Egypt</p>
+                        <p><i class="fa-solid fa-language"></i> Arabic(Translation)</p>
+                        <p><i class="fa-solid fa-calendar"></i> Published: Jan 2024</p>
+                        <p class="price">$12.31</p>
+                     </div>
+                     <div class="publisher">
+                        <h4>Beirut Publishing House</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> Beirut, Lebanon</p>
+                        <p><i class="fa-solid fa-language"></i> Arabic(Translation)</p>
+                        <p><i class="fa-solid fa-calendar"></i> Published: Feb 2024</p>
+                        <p class="price">$26.50</p>
+                     </div>
+                     <div class="publisher">
+                        <h4>World Literature Press</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> London, UK</p>
+                        <p><i class="fa-solid fa-language"></i> English</p>
+                        <p><i class="fa-solid fa-calendar"></i> Published: Apr 2024</p>
+                        <p class="price">$29.95</p>
+                     </div>
+                     <div class="publisher">
+                        <h4>Amman Books</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> Amman, Jordan</p>
+                        <p><i class="fa-solid fa-language"></i> Arabic(Translation)</p>
+                        <p><i class="fa-solid fa-calendar"></i> Published: Mar 2024</p>
+                        <p class="price">$22.75</p>
+                     </div>
+                  </div>
+               </div>
+               <!-- Compare Prices Tab -->
+               <div class="tab-content" id="compare">
+                  <table class="prices-table">
+                     <thead>
+                        <tr>
+                           <th>Store</th>
+                           <th>Format</th>
+                           <th>Shipping</th>
+                           <th>Price</th>
+                           <th>Total</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr class="best-price">
+                           <td>Dar Dawen</td>
+                           <td>Paperback</td>
+                           <td>$0 (Local Delivery)</td>
+                           <td>$12.31</td>
+                           <td class="price">$12.31</td>
+                        </tr>
+                        <tr>
+                           <td>Dar Oktob</td>
+                           <td>Paperback</td>
+                           <td>$1.20</td>
+                           <td>$12.99</td>
+                           <td>$14.19</td>
+                        </tr>
+                        <tr>
+                           <td>Dar Al Masry</td>
+                           <td>Paperback</td>
+                           <td>$2.00</td>
+                           <td>$13.50</td>
+                           <td>$15.50</td>
+                        </tr>
+                        <tr>
+                           <td>Dar Ibn Rajab</td>
+                           <td>Paperback</td>
+                           <td>$1.50</td>
+                           <td>$14.00</td>
+                           <td>$15.50</td>
+                        </tr>
+                        <tr>
+                           <td>Dar Al Helm</td>
+                           <td>Paperback</td>
+                           <td>$2.50</td>
+                           <td>$13.75</td>
+                           <td>$16.25</td>
+                        </tr>
+                        <tr>
+                           <td>eBook Platform</td>
+                           <td>eBook</td>
+                           <td>$0</td>
+                           <td>$13.99</td>
+                           <td>$13.99</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <!-- Reviews Tab -->
+               <div class="tab-content" id="reviews">
+                  <!-- Review 1 -->
+                  <div class="review">
+                     <div class="review-header">
+                        <div class="review-user">
+                           <img src="assets\images\users\47207032.jpg" alt="User Avatar">
+                           <div class="name">Chelsea Humphrey</div>
+                        </div>
+                        <div class="review-date">July 1, 2020</div>
+                     </div>
+                     <div class="review-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                     </div>
+                     <div class="review-content">
+                        Another reviewer used the terms "predictable, important, and frustrating" to describe this book, and I have to wholeheartedly agree. I thought for sure that this would be the easiest 5 stars I'd give in 2020, but I think my expectations were way out of line for what this book intended to be. The idea of a Cinderella retelling that features diverse characters smashing the patriarchy is truly the level of fantasy we need in the world today; however, I really struggled to get past the fact that there is hardly any world building in this story, which caused me to feel a disconnect to characters that were keeping me at arms length. The narrative here felt heavy-handed, as the bringing down of toxic masculinity was more "telling than showing", and the plot plays out pretty much as you'd expect, aside from a really excellent reimagining of the fairy godmother. Even though this one wasn't quite what I'd hoped, I highly respect what the author was creating with this book, and I definitely recommend you try this one out for yourself.                     
+                     </div>
+                  </div>
+                  <!-- Review 2 -->
+                  <div class="review">
+                     <div class="review-header">
+                        <div class="review-user">
+                           <img src="assets\images\users\100866337.jpg" alt="User Avatar">
+                           <div class="name">Renaissance Kate</div>
+                        </div>
+                        <div class="review-date">October 29, 2020</div>
+                     </div>
+                     <div class="review-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                     </div>
+                     <div class="review-content">
+                        While I was excited about the premise of this book, unfortunately it did not deliver. I loved the representation of BIPOC and LGBTQ+ characters, as this is incredibly important and something we need to continue normalizing and supporting in YA. However, from a story and writing perspective, this book totally flopped for me.
+                        Sophia is another rebellious YA heroine whose reasons for wanting to dismantle a 200-year-old oppressive political system never truly go beyond surface level. We are told her grandmother taught her the king was bad, we are told she loves Erin and would do anything so they could have a life together, but we are never really shown this burning hatred to make it believable. Sophia is rash, talks back to everyone, and is determined to bring down the king without any semblance of a plan. More often than not, I was questioning her actions rather than rooting for her.
+                        Her romance with Constance, while having its cute moments, was very rushed and could have been better developed. Sophia quickly forgets Erin, one of the two loosely established reasons for her rebellious actions, and falls head-over-heels for the fiery Constance. I would’ve liked to see more sparks and yearning between them as we see Sophia realize Constance, and not Erin, is the one she’s supposed to love.
+                        This book is also filled with underused side characters who had so much potential. While I could write an entire paragraph on any one of them, I want to primarily talk about Luke. From the moment he’s introduced, one would think he was going to have a major role in this story:
+                        What I wanted: Luke to join Sophia and Constance's squad, and they recruit a crew of queer rebels to take down the sexist, bigoted king.
+                        What I got: At the beginning of the book, Luke is arrested at the ball and then doesn’t appear again until the very end.
+                        Luke had a lot of potential as one of many interesting characters who could have been better integrated into the story.
+                        The SuperEvil™ king was a bit of a caricature, and I didn’t quite understand or buy his motives. The system for choosing his successor made no sense, both before and after the plot twist.
+                        Another major let-down for me in this book was the worldbuilding. The magic system and connections to Cinderella’s tale could have been more deeply explored or better woven into the story. There were some nice touches, such as stores selling knock-off Fairy Godmother potions or girls desiring expensive glass slippers for the ball, but otherwise it seemed the magical elements were only developed when they were important to the plot.
+                        Now, please bear with me for a bit of Francophile nitpicking. The version of Cinderella used in this book can be traced to the French fairy tale. While many place names in this book are clearly French-inspired – Mersailles, Lille, Chione – the author does not stick with this French theme throughout the story. Although a few characters have French names (Édouard, Gabrielle, even Constance. Also Émile, though this is traditionally a man’s name), most of the characters do not. Erin? Liv? Manford? Isla? Morgan? Not to mention Sophia and Luke, who easily could have been Sophie and Luc. For worldbuilding and consistency’s sake, I wish the author would have committed one way or the other because the inconsistencies were distracting.
+                        As I mentioned, the only reason I can really recommend this book is for the inclusive representation. It’s an easy enough read with a fun twist on the classic fairytale and important elements of girls overthrowing the patriarchy. However, the unfulfilling execution of its promising premise left a lot to be desired
+                        Thank you to Bloomsbury YA via Netgalley for providing me with an eARC in exchange for an honest review. All opinions expressed are my own.                     
+                     </div>
+                  </div>
+                  <!-- Write Review Form -->
+                  <div class="write-review">
+                     <h4>Write a Review</h4>
+                     <form class="review-form">
+                        <div class="star-rating">
+                           <i class="fa-regular fa-star" data-rating="1"></i>
+                           <i class="fa-regular fa-star" data-rating="2"></i>
+                           <i class="fa-regular fa-star" data-rating="3"></i>
+                           <i class="fa-regular fa-star" data-rating="4"></i>
+                           <i class="fa-regular fa-star" data-rating="5"></i>
+                        </div>
+                        <textarea placeholder="Share your thoughts about this book..."></textarea>
+                        <button type="submit" class="btn">Submit Review</button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- ======= Footer Section ======= -->
+      <section class="footer">
+         <div class="box-container">
+            <div class="box">
+               <h3>Quick links</h3>
+               <a href="index.html"><i class="fa-solid fa-arrow-right"></i> Home</a>
+               <a href="library.html"><i class="fa-solid fa-arrow-right"></i> New Releases</a>
+               <a href="book-club.html"><i class="fa-solid fa-arrow-right"></i> Book Club</a>
+               <a href="blogs.html"><i class="fa-solid fa-arrow-right"></i> Blog</a>
+               <a href="contact.html"><i class="fa-solid fa-arrow-right"></i> Contact</a>
+            </div>
+            <div class="box">
+               <h3>Extra links</h3>
+               <a href="library.html"><i class="fa-solid fa-arrow-right"></i> Search Books</a>
+               <a href="compare.html"><i class="fa-solid fa-arrow-right"></i> Compare Books</a>
+               <a href="store.html"><i class="fa-solid fa-arrow-right"></i> Online Bookstore</a>
+               <a href="index.html#reviews"><i class="fa-solid fa-arrow-right"></i> Reviews & Ratings</a>
+               <a href="#interview"><i class="fa-solid fa-arrow-right"></i> interviews & Events</a>
+            </div>
+            <div class="box">
+               <h3>Contact info</h3>
+               <a href="tel:+201211774738"><i class="fa-solid fa-phone"></i> +20 1211774738</a>
+               <a href="tel:+201019720641"><i class="fa-solid fa-phone"></i> +20 1019720641</a>
+               <a href="mailto:amr10tuf@gmail.com"><i class="fa-solid fa-envelope"></i> amr10tuf@gmail.com</a>
+               <img src="assets/images/boooks/m8olty.png" class="m8olty" />
+            </div>
+         </div>
+         <div class="share">
+            <a href="https://www.linkedin.com/in/amryb/" class="fab fa-linkedin"></a>
+            <a href="https://github.com/AMRYB" class="fa-brands fa-github"></a>
+            <a href="https://www.facebook.com/DrAmryasser" class="fa-brands fa-facebook-f"></a>
+            <a href="https://discord.gg/AMRYB" class="fa-brands fa-discord"></a>
+         </div>
+      </section>
+      <!-- ======= Scripts ======= -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>

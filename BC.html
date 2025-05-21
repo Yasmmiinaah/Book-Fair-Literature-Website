@@ -1,0 +1,736 @@
+ <!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Book Club & Discussion Forum</title>
+      <link rel="icon" href="assets/images/logos/MLogo.png" />
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css" />
+      <link rel="stylesheet" href="assets/css/main.css" />
+      <style>
+         /* Additional styles for book club page */
+         .book-club-container {
+            max-width: 1200px;
+            margin: 0 auto;
+         }
+         
+         .book-club-hero {
+            background: linear-gradient(rgba(20, 36, 65, 0.8), rgba(20, 36, 65, 0.8)), url('assets/images/book-club-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 5%;
+            text-align: center;
+            margin-bottom: 5rem;
+         }
+         
+         .book-club-hero h2 {
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+         }
+         
+         .book-club-hero p {
+            font-size: 1.8rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+         }
+         
+         .featured-book {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 5rem;
+            padding: 2rem;
+            background-color: #f9fafe;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+         }
+         
+         .featured-book-image {
+            flex: 1 1 300px;
+         }
+         
+         .featured-book-image img {
+            max-height: 350px;
+         }
+         
+         .featured-book-info {
+            flex: 1 1 500px;
+         }
+         
+         .featured-book-info h3 {
+            font-size: 3rem;
+            color: var(--darkblue);
+            margin-bottom: 1rem;
+         }
+         
+         .featured-book-info .author {
+            font-size: 1.8rem;
+            color: var(--light-color);
+            margin-bottom: 2rem;
+         }
+         
+         .featured-book-info .desc {
+            font-size: 1.6rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+         }
+         
+         .meeting-details {
+            background-color: #f0f7ff;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+         }
+         
+         .meeting-details h4 {
+            font-size: 2rem;
+            color: var(--darkblue);
+            margin-bottom: 1rem;
+         }
+         
+         .meeting-details p {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+         }
+         
+         .meeting-details p i {
+            color: var(--blue);
+            margin-right: 1rem;
+            width: 20px;
+         }
+         
+         .discussion-forums {
+            margin: 5rem 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+         }
+         
+         .forum-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+         }
+         
+         .forum-card:hover {
+            transform: translateY(-5px);
+         }
+         
+         .forum-card .forum-header {
+            background: var(--darkblue);
+            color: white;
+            padding: 1.5rem;
+         }
+         
+         .forum-card .forum-header h4 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+         }
+         
+         .forum-card .forum-header p {
+            font-size: 1.4rem;
+            opacity: 0.8;
+         }
+         
+         .forum-card .forum-body {
+            padding: 1.5rem;
+         }
+         
+         .forum-card .forum-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.4rem;
+            color: var(--light-color);
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+            margin-top: 1rem;
+         }
+         
+         .forum-activity {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+         }
+         
+         .forum-activity img {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+         }
+         
+         .forum-activity .activity-content {
+            flex-grow: 1;
+         }
+         
+         .forum-activity .username {
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: var(--darkblue);
+         }
+         
+         .forum-activity .snippet {
+            font-size: 1.4rem;
+            color: var(--light-color);
+            margin-top: 0.3rem;
+         }
+         
+         .upcoming-events {
+            margin: 5rem 0;
+         }
+         
+         .event-card {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+         }
+         
+         .event-date {
+            flex: 0 0 120px;
+            background: var(--yellow);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+         }
+         
+         .event-date .month {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+         }
+         
+         .event-date .day {
+            font-size: 3.5rem;
+            font-weight: bold;
+            line-height: 1;
+         }
+         
+         .event-date .time {
+            font-size: 1.4rem;
+            margin-top: 0.5rem;
+         }
+         
+         .event-details {
+            flex: 1;
+            padding: 1.5rem 2rem;
+         }
+         
+         .event-details h4 {
+            font-size: 2rem;
+            color: var(--darkblue);
+            margin-bottom: 1rem;
+         }
+         
+         .event-details p {
+            font-size: 1.5rem;
+            color: var(--light-color);
+            margin-bottom: 1rem;
+         }
+         
+         .event-details .location {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            color: var(--black);
+         }
+         
+         .event-details .location i {
+            color: var(--pink);
+            margin-right: 0.8rem;
+         }
+         
+         .join-section {
+            background: linear-gradient(90deg, var(--darkblue), #1a365d);
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+            border-radius: 10px;
+            margin-bottom: 5rem;
+         }
+         
+         .join-section h3 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+         }
+         
+         .join-section p {
+            font-size: 1.8rem;
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
+            line-height: 1.6;
+         }
+         
+         .join-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+         }
+         
+         .faq-container {
+            margin: 5rem 0;
+         }
+         
+         .faq-item {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+         }
+         
+         .faq-question {
+            padding: 2rem;
+            background: #f9f9f9;
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--darkblue);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+         }
+         
+         .faq-question i {
+            transition: transform 0.3s ease;
+         }
+         
+         .faq-answer {
+            padding: 0 2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+         }
+         
+         .faq-answer p {
+            font-size: 1.6rem;
+            line-height: 1.8;
+            color: var(--light-color);
+            padding-bottom: 2rem;
+         }
+         
+         .faq-item.active .faq-question {
+            background: var(--blue);
+            color: white;
+         }
+         
+         .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+            color: white;
+         }
+         
+         .faq-item.active .faq-answer {
+            max-height: 1000px;
+            padding: 2rem 2rem 0;
+         }
+         
+         @media (max-width: 768px) {
+            .book-club-hero h2 {
+               font-size: 3.5rem;
+            }
+            
+            .event-date {
+               flex: 0 0 100%;
+               padding: 1rem;
+            }
+            
+            .join-buttons {
+               flex-direction: column;
+               align-items: center;
+            }
+         }
+      </style>
+   </head>
+   <body>
+      <!-- ======= Header Section ======= -->
+      <header class="header">
+         <div class="header-1">
+            <a href="index.html" class="logo">
+            <img src="assets/images/logos/BLogo.png" style="height: 60px;" />
+            </a>
+            <form action="" class="search-form">
+               <input type="search" placeholder="search here..." id="search-box" />
+               <label for="search-box" class="fa-regular fa-search"></label>
+            </form>
+            <div class="icons">
+               <div id="search-btn" class="fa-regular fa-bookmark"></div>
+               <div id="login-btn" class="fa-thin fa-user"></div>
+            </div>
+         </div>
+         <div class="header-2">
+            <nav class="navbar">
+               <a href="index.html">Home</a>
+               <a href="library.html">New Releases</a>
+               <a href="book-club.html">Book Club</a>
+               <a href="interviews.html">interview</a>
+               <a href="contact.html">Contact</a>
+            </nav>
+         </div>
+      </header>
+      <!-- ======= Bottom Navigation Bar ======= -->
+      <nav class="bottom-navbar">
+         <a href="index.html" class="fa-solid fa-house-blank"></a>
+         <a href="library.html" class="fa-solid fa-fire"></a>
+         <a href="book-club.html" class="fa-solid fa-books"></a>
+         <a href="interviews.html" class="fa-solid fa-blog"></a>
+         <a href="contact.html" class="fa-solid fa-envelopes"></a>
+      </nav>
+   
+      <!-- ======= Login/Register Forms ======= -->
+      <div class="login-form-container">
+         <div id="close-login-btn" class="fa-solid fa-times"></div>
+         <!-- Login Form -->
+         <form id="login-form">
+            <h3>sign in</h3>
+            <span>username</span>
+            <input type="email" class="box" placeholder="enter your email" required />
+            <span>password</span>
+            <input type="password" class="box" placeholder="enter your password" required />
+            <div class="checkbox">
+               <input type="checkbox" id="remember-me" />
+               <label for="remember-me"> remember me</label>
+            </div>
+            <input type="submit" value="sign in" class="btn" />
+            <p>Forgotten your password? <a href="#" id="show-reset">Reset Password</a></p>
+            <p>First time? <a href="#" id="show-register">create one</a></p>
+         </form>
+         <!-- Register Form -->
+         <form id="register-form" style="display: none;">
+            <h3>create account</h3>
+            <div class="name-fields">
+               <div>
+                  <span>first name</span>
+                  <input type="text" class="box" placeholder="enter your first name" required />
+               </div>
+               <div>
+                  <span>last name</span>
+                  <input type="text" class="box" placeholder="enter your last name" required />
+               </div>
+            </div>
+            <span>email</span>
+            <input type="email" class="box" placeholder="enter your email" required />
+            <span>password</span>
+            <input type="password" class="box" placeholder="enter your password" required />
+            <input type="submit" value="register" class="btn" />
+            <p>Nah, it's not my first time!! <a href="#" id="show-login">Login</a></p>
+         </form>
+         <!-- Reset Password Form -->
+         <form id="reset-form" style="display: none;">
+            <h3>reset password</h3>
+            <span>your email</span>
+            <input type="email" class="box" placeholder="enter your registered email" required />
+            <input type="submit" value="send reset link" class="btn" />
+            <p id="reset-msg" style="font-size: 1.4rem; text-align:center; display: none;"></p>
+            <p>Remembered your password? <a href="#" id="show-login-again">Login</a></p>
+         </form>
+      </div>
+      
+      <!-- ======= User Menu (Dropdown) ======= -->
+      <div id="user-menu" style="display: none; position: absolute; top: 70px; right: 20px; background: white; border: 1px solid #ccc; border-radius: 5px; padding: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 1000;">
+         <p id="welcome-name" style="margin: 0 0 10px; font-size: 1.5rem; color: #444;"></p>
+         <a href="favorite.html" style="display: block; margin-bottom: 10px; font-size: 1.4rem; color: #444; text-decoration: none;">My Favorites</a>
+         <button onclick="logout()" style="background: var(--pink); color: white; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer;">Logout</button>
+      </div>
+      
+      <!-- ======= Book Club Hero Section ======= -->
+      <div class="book-club-hero">
+         <h2>Welcome to Our Book Club</h2>
+         <p>Join our community of passionate readers! We discuss thought-provoking books, share insights, and connect with fellow book lovers.</p>
+      </div>
+      
+      <!-- ======= Book Club Content ======= -->
+      <section class="book-club-container">
+         <h2 class="heading"><span>Current Selection</span></h2>
+         
+         <div class="featured-book">
+            <div class="featured-book-image">
+               <img src="assets\images\boooks\book-26.png"/>
+            </div>
+            <div class="featured-book-info">
+               <h3>The Midnight Library</h3>
+               <p class="author">by Matt Haig</p>
+               <p class="desc">Between life and death there is a library, and within that library, the shelves go on forever. Every book provides a chance to try another life you could have lived. To see how things would be if you had made other choices... Would you have done anything different, if you had the chance to undo your regrets?</p>
+               <div class="meeting-details">
+                  <h4>Next Discussion Meeting</h4>
+                  <p><i class="fa-solid fa-calendar"></i> Saturday, May 24, 2025</p>
+                  <p><i class="fa-solid fa-clock"></i> 7:00 PM - 8:30 PM</p>
+                  <p><i class="fa-solid fa-location-dot"></i> Main Library, Conference Room B</p>
+                  <p><i class="fa-solid fa-video"></i> Zoom Meeting ID: 876 5432 1098</p>
+               </div>
+               <a href="#join-discussion" class="btn">Join Discussion</a>
+            </div>
+         </div>
+         
+         <h2 class="heading"><span>Discussion Forums</span></h2>
+         
+         <div class="discussion-forums">
+            <div class="forum-card">
+               <div class="forum-header">
+                  <h4>Chapter 1-5 Discussion</h4>
+                  <p>Early plot development and character introductions</p>
+               </div>
+               <div class="forum-body">
+                  <div class="forum-activity">
+                     <img src="/api/placeholder/80/80" alt="User profile" />
+                     <div class="activity-content">
+                        <div class="username">Sarah T.</div>
+                        <div class="snippet">I found the concept of the library fascinating because it represents...</div>
+                     </div>
+                  </div>
+                  <div class="forum-activity">
+                     <img src="/api/placeholder/80/80" alt="User profile" />
+                     <div class="activity-content">
+                        <div class="username">Marcus W.</div>
+                        <div class="snippet">The author's description of depression was so authentic and...</div>
+                     </div>
+                  </div>
+                  <div class="forum-stats">
+                     <span><i class="fa-solid fa-comment"></i> 24 posts</span>
+                     <span><i class="fa-solid fa-user"></i> 18 members</span>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="forum-card">
+               <div class="forum-header">
+                  <h4>Chapter 6-12 Discussion</h4>
+                  <p>The parallel lives exploration</p>
+               </div>
+               <div class="forum-body">
+                  <div class="forum-activity">
+                     <img src="/api/placeholder/80/80" alt="User profile" />
+                     <div class="activity-content">
+                        <div class="username">Elena J.</div>
+                        <div class="snippet">The Olympic swimmer life really stood out to me because...</div>
+                     </div>
+                  </div>
+                  <div class="forum-activity">
+                     <img src="/api/placeholder/80/80" alt="User profile" />
+                     <div class="activity-content">
+                        <div class="username">David P.</div>
+                        <div class="snippet">I think the author is trying to tell us that regret is...</div>
+                     </div>
+                  </div>
+                  <div class="forum-stats">
+                     <span><i class="fa-solid fa-comment"></i> 19 posts</span>
+                     <span><i class="fa-solid fa-user"></i> 15 members</span>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="forum-card">
+               <div class="forum-header">
+                  <h4>Final Chapters Discussion</h4>
+                  <p>Conclusion and overall themes</p>
+               </div>
+               <div class="forum-body">
+                  <div class="forum-activity">
+                     <img src="/api/placeholder/80/80" alt="User profile" />
+                     <div class="activity-content">
+                        <div class="username">Robert K.</div>
+                        <div class="snippet">The ending was perfect in my opinion. It showed that...</div>
+                     </div>
+                  </div>
+                  <div class="forum-activity">
+                     <img src="/api/placeholder/80/80" alt="User profile" />
+                     <div class="activity-content">
+                        <div class="username">Sophia L.</div>
+                        <div class="snippet">I was moved to tears by the final realization that Nora...</div>
+                     </div>
+                  </div>
+                  <div class="forum-stats">
+                     <span><i class="fa-solid fa-comment"></i> 31 posts</span>
+                     <span><i class="fa-solid fa-user"></i> 22 members</span>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="forum-card">
+               <div class="forum-header">
+                  <h4>Author's Style & References</h4>
+                  <p>Literary analysis and connections</p>
+               </div>
+               <div class="forum-body">
+                  <div class="forum-activity">
+                     <img src="/api/placeholder/80/80" alt="User profile" />
+                     <div class="activity-content">
+                        <div class="username">Professor James</div>
+                        <div class="snippet">Matt Haig's writing style has evolved significantly since...</div>
+                     </div>
+                  </div>
+                  <div class="forum-activity">
+                     <img src="/api/placeholder/80/80" alt="User profile" />
+                     <div class="activity-content">
+                        <div class="username">Lily A.</div>
+                        <div class="snippet">The philosophical references remind me of Sartre's work on...</div>
+                     </div>
+                  </div>
+                  <div class="forum-stats">
+                     <span><i class="fa-solid fa-comment"></i> 15 posts</span>
+                     <span><i class="fa-solid fa-user"></i> 12 members</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         <h2 class="heading"><span>Upcoming Events</span></h2>
+         
+         <div class="upcoming-events">
+            <div class="event-card">
+               <div class="event-date">
+                  <span class="month">May</span>
+                  <span class="day">24</span>
+                  <span class="time">7:00 PM</span>
+               </div>
+               <div class="event-details">
+                  <h4>The Midnight Library Discussion</h4>
+                  <p>Join us for an in-depth discussion of Matt Haig's thought-provoking novel. We'll explore themes of regret, possibility, and the value of life.</p>
+                  <div class="location">
+                     <i class="fa-solid fa-location-dot"></i> Main Library, Conference Room B
+                  </div>
+               </div>
+            </div>
+            
+            <div class="event-card">
+               <div class="event-date">
+                  <span class="month">Jun</span>
+                  <span class="day">10</span>
+                  <span class="time">6:30 PM</span>
+               </div>
+               <div class="event-details">
+                  <h4>Author Meet & Greet: Rebecca Chen</h4>
+                  <p>Local author Rebecca Chen will join us to discuss her latest psychological thriller "The Silent House" and sign copies for attendees.</p>
+                  <div class="location">
+                     <i class="fa-solid fa-location-dot"></i> Bookshop Café, Downtown
+                  </div>
+               </div>
+            </div>
+            
+            <div class="event-card">
+               <div class="event-date">
+                  <span class="month">Jun</span>
+                  <span class="day">28</span>
+                  <span class="time">7:00 PM</span>
+               </div>
+               <div class="event-details">
+                  <h4>New Book Announcement & Summer Reading List</h4>
+                  <p>We'll reveal our next book club selection and discuss our recommended summer reading list! Bring your own suggestions to share.</p>
+                  <div class="location">
+                     <i class="fa-solid fa-location-dot"></i> Virtual Meeting (Zoom)
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         <div id="join-discussion" class="join-section">
+            <h3>Join Our Book Club Community</h3>
+            <p>Connect with fellow book lovers, participate in engaging discussions, and discover new perspectives through literature. Our book club is open to readers of all backgrounds and interests.</p>
+            <div class="join-buttons">
+               <a href="#" class="btn">Sign Up Now</a>
+               <a href="#" class="btn" style="background: var(--green);">View Past Books</a>
+            </div>
+         </div>
+         
+         <h2 class="heading"><span>Frequently Asked Questions</span></h2>
+         
+         <div class="faq-container">
+            <div class="faq-item">
+               <div class="faq-question">
+                  How often does the book club meet? <i class="fa-solid fa-chevron-down"></i>
+               </div>
+               <div class="faq-answer">
+                  <p>We typically meet once a month for our main discussion. However, we also have forum discussions ongoing throughout the month where members can participate at their own pace. Special events like author visits are scheduled occasionally as opportunities arise.</p>
+               </div>
+            </div>
+            
+            <div class="faq-item">
+               <div class="faq-question">
+                  Do I need to finish the book before attending? <i class="fa-solid fa-chevron-down"></i>
+               </div>
+               <div class="faq-answer">
+                  <p>While it's ideal to complete the book before the main discussion, we understand that not everyone reads at the same pace. We have separate forum discussions for different sections of the book, so you can participate in discussions for the parts you've completed. We just ask that you're mindful of spoilers in the main discussion.</p>
+               </div>
+            </div>
+            
+            <div class="faq-item">
+               <div class="faq-question">
+                  How are books selected for the club? <i class="fa-solid fa-chevron-down"></i>
+               </div>
+               <div class="faq-answer">
+                  <p>Our book selection process is democratic! Club members can nominate books, and then we vote on the selections. We try to vary our reading list to include different genres, cultures, and perspectives. We also occasionally select books that coincide with author events or literary festivals in our area.</p>
+               </div>
+            </div>
+            
+            <div class="faq-item">
+               <div class="faq-question">
+                  Is there a membership fee? <i class="fa-solid fa-chevron-down"></i>
+               </div>
+               <div class="faq-answer">
+                  <p>There is no fee to join our book club! The only cost is purchasing or borrowing the books we read. We often partner with local libraries and bookstores to ensure members can access our selections affordably. For in-person meetings, we sometimes collect a small contribution for refreshments.</p>
+               </div>
+            </div>
+            
+            <div class="faq-item">
+               <div class="faq-question">
+                  Can I join discussions online if I can't attend in person? <i class="fa-solid fa-chevron-down"></i>
+               </div>
+               <div class="faq-answer">
+                  <p>Absolutely! We have a hybrid format that accommodates both in-person and virtual participation. All our main discussions have a Zoom option, and our online forums are active 24/7. Many of our members participate exclusively online, while others enjoy the mix of virtual and in-person engagement.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      
+      <!-- ======= Footer Section ======= -->
+      <section class="footer">
+         <div class="box-container">
+            <div class="box">
+               <h3>Quick links</h3>
+               <a href="index.html"><i class="fa-solid fa-arrow-right"></i> Home</a>
+               <a href="library.html"><i class="fa-solid fa-arrow-right"></i> New Releases</a>
+               <a href="book-club.html"><i class="fa-solid fa-arrow-right"></i> Book Club</a>
+               <a href="#blogs"><i class="fa-solid fa-arrow-right"></i> Blog</a>
+               <a href="contact.html"><i class="fa-solid fa-arrow-right"></i> Contact</a>
+            </div>
+            <div class="box">
+               <h3>Extra links</h3>
+               <a href="library.html"><i class="fa-solid fa-arrow-right"></i> Search Books</a>
+               <a href="compare.html"><i class="fa-solid fa-arrow-right"></i> Compare Books</a>
+               <a href="store.html"><i class="fa-solid fa-arrow-right"></i> Online Bookstore</a>
+               <a href="index.html#reviews"><i class="fa-solid fa-arrow-right"></i> Reviews & Ratings</a>
+               <a href="interviews.html"><i class="fa-solid fa-arrow-right"></i> interviews & Events</a>
+            </div>
+            <div class="box">
+               <h3>Contact info</h3>
+               <a href="tel:+201211774738"><i class="fa-solid fa-phone"></i> +20 1211774738</a>
+               <a href="tel:+201019720641"><i class="fa-solid fa-phone"></i> +20 1019720641</a>
+               <a href="mailto:amr10tuf@gmail.com"><i class="fa-solid fa-envelope"></i> amr10tuf@gmail.com</a>
+               <img src="assets/images/m8olty.png" class="m8olty" />
+            </div>
+         </div>
+         <div class="share">
+            <a href="https://www.linkedin.com/in/amryb/" class="fab fa-linkedin"></a>
+            <a href="https://github.com/AMRYB" class="fa-brands fa-github"></a>
+            <a href="https://www.facebook.com/DrAmryasser" class="fa-brands fa-facebook-f"></a>
+            <a href="https://discord.gg/AMRYB" class="fa-brands fa-discord"></a>
+         </div>
+      </section>
+            <!-- ======= Scripts ======= -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>

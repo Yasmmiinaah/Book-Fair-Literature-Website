@@ -19,11 +19,11 @@
             </a>
             <form action="" class="search-form">
                <input type="search" placeholder="search here..." id="search-box" />
-               <label for="search-box" class="fa-solid fa-search"></label>
+               <label for="search-box" class="fa-regular fa-search"></label>
             </form>
             <div class="icons">
-               <div id="search-btn" class="fa-solid fa-search"></div>
-                <div id="login-btn" class="fa-thin fa-user"></div>
+               <div id="search-btn" class="fa-regular fa-bookmark"></div>
+               <div id="login-btn" class="fa-thin fa-user"></div>
             </div>
          </div>
          <div class="header-2">
@@ -32,7 +32,7 @@
                <a href="library.html">New Releases</a>
                <a href="book-club.html">Book Club</a>
                <a href="interviews.html">interview</a>
-               <a href="#">Contact</a>
+               <a href="contact.html">Contact</a>
             </nav>
          </div>
       </header>
@@ -98,202 +98,159 @@
          <a href="favorite.html" style="display: block; margin-bottom: 10px; font-size: 1.4rem; color: #444; text-decoration: none;">My Favorites</a>
          <button onclick="logout()" style="background: var(--pink); color: white; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer;">Logout</button>
       </div>
-            <!-- ======= interview Section ======= -->
-<section class="featured" id="featured">
-
-<h1 class="heading"> <span>Favorite Books</span> </h1>
-
-<div class="swiper featured-slider">
-
-    <div class="swiper-wrapper">
-
-        <div class="swiper-slide box">
-            <div class="icons">
-                <a href="#" class="fa-solid fa-eye"></a>
-                <a href="#" class="fa-solid fa-xmark-large"></a>
+      <!-- ======= interview Section ======= -->
+      <section class="featured" id="featured">
+         <h1 class="heading"> <span>Favorite Books</span> </h1>
+         <div class="swiper featured-slider">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide box">
+                  <div class="icons">
+                     <a href="#" class="fa-solid fa-eye"></a>
+                     <a href="#" class="fa-solid fa-xmark-large" onclick="removeSlide(this)"></a>
+                  </div>
+                  <div class="image">
+                     <img src="assets/images/boooks/book-14.png">
+                  </div>
+                  <div class="content">
+                     <h3>fn allambalaa</h3>
+                     <div class="price">$15.99 <span>$20.99</span></div>
+                  </div>
+               </div>
+               <div class="swiper-slide box">
+                  <div class="icons">
+                     <a href="#" class="fa-solid fa-eye"></a>
+                     <a href="#" class="fa-solid fa-xmark-large" onclick="removeSlide(this)"></a>
+                  </div>
+                  <div class="image">
+                     <img src="assets/images/boooks/book-9.png">
+                  </div>
+                  <div class="content">
+                     <h3>It Ends with Us</h3>
+                     <div class="price">$8.2 <span>$12.69</span></div>
+                  </div>
+               </div>
+               <div class="swiper-slide box">
+                  <div class="icons">
+                     <a href="book1-details.html" class="fa-solid fa-eye"></a>
+                     <a href="#" class="fa-solid fa-xmark-large" onclick="removeSlide(this)"></a>
+                  </div>
+                  <div class="image">
+                     <img src="assets/images/boooks/book-10.png">
+                  </div>
+                  <div class="content">
+                     <h3>Cinderella Is Dead</h3>
+                     <div class="price">$12.31 <span>$19.47</span></div>
+                  </div>
+               </div>
+               <div class="swiper-slide box">
+                  <div class="icons">
+                     <a href="#" class="fa-solid fa-eye"></a>
+                     <a href="#" class="fa-solid fa-xmark-large" onclick="removeSlide(this)"></a>
+                  </div>
+                  <div class="image">
+                     <img src="assets/images/boooks/book-5.png">
+                  </div>
+                  <div class="content">
+                     <h3>Ignite Me</h3>
+                     <div class="price">$11.96 <span>$16.48</span></div>
+                  </div>
+               </div>
+               <div class="swiper-slide box">
+                  <div class="icons">
+                     <a href="#" class="fa-solid fa-eye"></a>
+                     <a href="#" class="fa-solid fa-xmark-large" onclick="removeSlide(this)"></a>
+                  </div>
+                  <div class="image">
+                     <img src="assets/images/boooks/book-27.png">
+                  </div>
+                  <div class="content">
+                     <h3>how to do things you hate</h3>
+                     <div class="price">$14.08 <span>$21.78</span></div>
+                  </div>
+               </div>
+               <div class="swiper-slide box">
+                  <div class="icons">
+                     <a href="#" class="fa-solid fa-eye"></a>
+                     <a href="#" class="fa-solid fa-xmark-large" onclick="removeSlide(this)"></a>
+                  </div>
+                  <div class="image">
+                     <img src="assets/images/boooks/book-28.png">
+                  </div>
+                  <div class="content">
+                     <h3>
+                        Atomic Habits
+                     </h3>
+                     <div class="price">$6.81 <span>$11.87</span></div>
+                  </div>
+               </div>
+               <div class="swiper-slide box">
+                  <div class="icons">
+                     <a href="#" class="fa-solid fa-eye"></a>
+                     <a href="#" class="fa-solid fa-xmark-large" onclick="removeSlide(this)"></a>
+                  </div>
+                  <div class="image">
+                     <img src="assets/images/boooks/book-12.png">
+                  </div>
+                  <div class="content">
+                     <h3>fy 8lby anthy 3rbya</h3>
+                     <div class="price">$17.91 <span>$26.7</span></div>
+                  </div>
+               </div>
+               <div class="swiper-slide box">
+                  <div class="icons">
+                     <a href="#" class="fa-solid fa-eye"></a>
+                     <a href="#" class="fa-solid fa-xmark-large" onclick="removeSlide(this)"></a>
+                  </div>
+                  <div class="image">
+                     <img src="assets/images/boooks/book-6.png">
+                  </div>
+                  <div class="content">
+                     <h3>Defy Me</h3>
+                     <div class="price">$9.36 <span>$10.9</span></div>
+                  </div>
+               </div>
             </div>
-            <div class="image">
-                <img src="assets/images/boooks/book-14.png">
-            </div>
-            <div class="content">
-                <h3>featured books</h3>
-                <div class="price">$15.99 <span>$20.99</span></div>
-            </div>
-        </div>
-
-        <div class="swiper-slide box">
-            <div class="icons">
-                <a href="#" class="fa-solid fa-eye"></a>
-                <a href="#" class="fa-solid fa-xmark-large"></a>
-            </div>
-            <div class="image">
-                <img src="assets/images/boooks/book-3.png">
-            </div>
-            <div class="content">
-                <h3>featured books</h3>
-                <div class="price">$15.99 <span>$20.99</span></div>
-            </div>
-        </div>
-
-        <div class="swiper-slide box">
-            <div class="icons">
-                <a href="#" class="fa-solid fa-eye"></a>
-                <a href="#" class="fa-solid fa-xmark-large"></a>
-            </div>
-            <div class="image">
-                <img src="assets/images/boooks/book-18.png">
-            </div>
-            <div class="content">
-                <h3>featured books</h3>
-                <div class="price">$15.99 <span>$20.99</span></div>
-            </div>
-        </div>
-
-        <div class="swiper-slide box">
-            <div class="icons">
-                <a href="#" class="fa-solid fa-eye"></a>
-                <a href="#" class="fa-solid fa-xmark-large"></a>
-            </div>
-            <div class="image">
-                <img src="assets/images/boooks/book-5.png">
-            </div>
-            <div class="content">
-                <h3>featured books</h3>
-                <div class="price">$15.99 <span>$20.99</span></div>
-            </div>
-        </div>
-
-        <div class="swiper-slide box">
-            <div class="icons">
-                <a href="#" class="fa-solid fa-eye"></a>
-                <a href="#" class="fa-solid fa-xmark-large"></a>
-            </div>
-            <div class="image">
-                <img src="assets/images/boooks/book-1.png">
-            </div>
-            <div class="content">
-                <h3>featured books</h3>
-                <div class="price">$15.99 <span>$20.99</span></div>
-            </div>
-        </div>
-
-        <div class="swiper-slide box">
-            <div class="icons">
-                <a href="#" class="fa-solid fa-eye"></a>
-                <a href="#" class="fa-solid fa-xmark-large"></a>
-            </div>
-            <div class="image">
-                <img src="assets/images/boooks/book-10.png">
-            </div>
-            <div class="content">
-                <h3>featured books</h3>
-                <div class="price">$15.99 <span>$20.99</span></div>
-            </div>
-        </div>
-
-        <div class="swiper-slide box">
-            <div class="icons">
-                <a href="#" class="fa-solid fa-eye"></a>
-                <a href="#" class="fa-solid fa-xmark-large"></a>
-            </div>
-            <div class="image">
-                <img src="assets/images/boooks/book-19.png">
-            </div>
-            <div class="content">
-                <h3>featured books</h3>
-                <div class="price">$15.99 <span>$20.99</span></div>
-            </div>
-        </div>
-
-        <div class="swiper-slide box">
-            <div class="icons">
-                <a href="#" class="fa-solid fa-eye"></a>
-                <a href="#" class="fa-solid fa-xmark-large"></a>
-            </div>
-            <div class="image">
-                <img src="assets/images/boooks/book-8.png">
-            </div>
-            <div class="content">
-                <h3>Cinderella Is Dead</h3>
-                <div class="price">$11.99 <span>$20.99</span></div>
-            </div>
-        </div>
-
-        <div class="swiper-slide box">
-            <div class="icons">
-                <a href="#" class="fa-solid fa-eye"></a>
-                <a href="#" class="fa-solid fa-xmark-large"></a>
-            </div>
-            <div class="image">
-                <img src="assets/images/boooks/book-12.png">
-            </div>
-            <div class="content">
-                <h3>featured books</h3>
-                <div class="price">$15.99 <span>$20.99</span></div>
-            </div>
-        </div>
-
-        <div class="swiper-slide box">
-            <div class="icons">
-                <a href="#" class="fa-solid fa-eye"></a>
-                <a href="#" class="fa-solid fa-xmark-large"></a>
-            </div>
-            <div class="image">
-                <img src="assets/images/boooks/book-6.png">
-            </div>
-            <div class="content">
-                <h3>featured books</h3>
-                <div class="price">$15.99 <span>$20.99</span></div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-
-    </div>
-
-</section>
+         </div>
+         <div class="swiper-button-next"></div>
+         <div class="swiper-button-prev"></div>
+         </div>
+      </section>
       <!-- ======= Footer Section ======= -->
       <section class="footer">
-        <div class="box-container">
-           <div class="box">
-              <h3>Quick links</h3>
-              <a href="index.html"><i class="fa-solid fa-arrow-right"></i> Home</a>
-              <a href="library.html"><i class="fa-solid fa-arrow-right"></i> New Releases</a>
-              <a href="book-club.html"><i class="fa-solid fa-arrow-right"></i> Book Club</a>
-              <a href="blogs.html"><i class="fa-solid fa-arrow-right"></i> Blog</a>
-              <a href="#contact"><i class="fa-solid fa-arrow-right"></i> Contact</a>
-              <a href="#contact"><i class="fa-solid fa-language"></i> Translate</a>
-           </div>
-           <div class="box">
-              <h3>Extra links</h3>
-              <a href="library.html"><i class="fa-solid fa-arrow-right"></i> Search Books</a>
-              <a href="compare.html"><i class="fa-solid fa-arrow-right"></i> Compare Books</a>
-              <a href="store.html"><i class="fa-solid fa-arrow-right"></i> Online Bookstore</a>
-              <a href="index.html#reviews"><i class="fa-solid fa-arrow-right"></i> Reviews & Ratings</a>
-              <a href="interviews.html"><i class="fa-solid fa-arrow-right"></i> interviews & Events</a>
-           </div>
-           <div class="box">
-              <h3>Contact info</h3>
-              <a href="tel:+201211774738"><i class="fa-solid fa-phone"></i> +20 1211774738</a>
-              <a href="tel:+201019720641"><i class="fa-solid fa-phone"></i> +20 1019720641</a>
-              <a href="mailto:amr10tuf@gmail.com"><i class="fa-solid fa-envelope"></i> amr10tuf@gmail.com</a>
-              <img src="assets/images/m8olty.png" class="m8olty" />
-           </div>
-        </div>
-        <div class="share">
-           <a href="https://www.linkedin.com/in/amryb/" class="fab fa-linkedin"></a>
-           <a href="https://github.com/AMRYB" class="fa-brands fa-github"></a>
-           <a href="https://www.facebook.com/DrAmryasser" class="fa-brands fa-facebook-f"></a>
-           <a href="https://discord.gg/AMRYB" class="fa-brands fa-discord"></a>
-        </div>
-     </section>
-     <!-- ======= Scripts ======= -->
-     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-     <script src="assets/js/main.js"></script>
-  </body>
+         <div class="box-container">
+            <div class="box">
+               <h3>Quick links</h3>
+               <a href="index.html"><i class="fa-solid fa-arrow-right"></i> Home</a>
+               <a href="library.html"><i class="fa-solid fa-arrow-right"></i> New Releases</a>
+               <a href="book-club.html"><i class="fa-solid fa-arrow-right"></i> Book Club</a>
+               <a href="blogs.html"><i class="fa-solid fa-arrow-right"></i> Blog</a>
+               <a href="contact.html"><i class="fa-solid fa-arrow-right"></i> Contact</a>
+            </div>
+            <div class="box">
+               <h3>Extra links</h3>
+               <a href="library.html"><i class="fa-solid fa-arrow-right"></i> Search Books</a>
+               <a href="compare.html"><i class="fa-solid fa-arrow-right"></i> Compare Books</a>
+               <a href="store.html"><i class="fa-solid fa-arrow-right"></i> Online Bookstore</a>
+               <a href="index.html#reviews"><i class="fa-solid fa-arrow-right"></i> Reviews & Ratings</a>
+               <a href="#interview"><i class="fa-solid fa-arrow-right"></i> interviews & Events</a>
+            </div>
+            <div class="box">
+               <h3>Contact info</h3>
+               <a href="tel:+201211774738"><i class="fa-solid fa-phone"></i> +20 1211774738</a>
+               <a href="tel:+201019720641"><i class="fa-solid fa-phone"></i> +20 1019720641</a>
+               <a href="mailto:amr10tuf@gmail.com"><i class="fa-solid fa-envelope"></i> amr10tuf@gmail.com</a>
+               <img src="assets/images/boooks/m8olty.png" class="m8olty" />
+            </div>
+         </div>
+         <div class="share">
+            <a href="https://www.linkedin.com/in/amryb/" class="fab fa-linkedin"></a>
+            <a href="https://github.com/AMRYB" class="fa-brands fa-github"></a>
+            <a href="https://www.facebook.com/DrAmryasser" class="fa-brands fa-facebook-f"></a>
+            <a href="https://discord.gg/AMRYB" class="fa-brands fa-discord"></a>
+         </div>
+      </section>
+      <!-- ======= Scripts ======= -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/js/main.js"></script>
+   </body>
 </html>

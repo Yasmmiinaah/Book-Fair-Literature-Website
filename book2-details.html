@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Book Details</title>
+      <link rel="icon" href="assets/images/logos/MLogo.png" />
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css" />
+      <link rel="stylesheet" href="assets/css/main.css" />
+   </head>
+   <body>
+      <!-- ======= Header Section ======= -->
+      <header class="header">
+         <div class="header-1">
+            <a href="index.html" class="logo">
+            <img src="assets/images/logos/BLogo.png" style="height: 60px;" />
+            </a>
+            <form action="" class="search-form">
+               <input type="search" placeholder="search here..." id="search-box" />
+               <label for="search-box" class="fa-regular fa-search"></label>
+            </form>
+            <div class="icons">
+               <div id="search-btn" class="fa-regular fa-bookmark"></div>
+               <div id="login-btn" class="fa-thin fa-user"></div>
+            </div>
+         </div>
+         <div class="header-2">
+            <nav class="navbar">
+               <a href="index.html">Home</a>
+               <a href="library.html">New Releases</a>
+               <a href="book-club.html">Book Club</a>
+               <a href="interviews.html">interview</a>
+               <a href="contact.html">Contact</a>
+            </nav>
+         </div>
+      </header>
+      <!-- ======= Bottom Navigation Bar ======= -->
+      <nav class="bottom-navbar">
+         <a href="index.html" class="fa-solid fa-house-blank"></a>
+         <a href="library.html#featured" class="fa-solid fa-fire"></a>
+         <a href="book-club.html" class="fa-solid fa-books"></a>
+         <a href="interviews.html" class="fa-solid fa-blog"></a>
+         <a href="#Contact" class="fa-solid fa-envelopes"></a>
+      </nav>
+      <!-- ======= Login/Register/Reset Forms ======= -->
+      <div class="login-form-container">
+         <div id="close-login-btn" class="fa-solid fa-times"></div>
+         <!-- Login Form -->
+         <form id="login-form">
+            <h3>sign in</h3>
+            <span>username</span>
+            <input type="email" class="box" placeholder="enter your email" required />
+            <span>password</span>
+            <input type="password" class="box" placeholder="enter your password" required />
+            <div class="checkbox">
+               <input type="checkbox" id="remember-me" />
+               <label for="remember-me"> remember me</label>
+            </div>
+            <input type="submit" value="sign in" class="btn" />
+            <p>Forgotten your password? <a href="#" id="show-reset">Reset Password</a></p>
+            <p>First time? <a href="#" id="show-register">create one</a></p>
+         </form>
+         <!-- Register Form -->
+         <form id="register-form" style="display: none;">
+            <h3>create account</h3>
+            <div class="name-fields">
+               <div>
+                  <span>first name</span>
+                  <input type="text" class="box" placeholder="enter your first name" required />
+               </div>
+               <div>
+                  <span>last name</span>
+                  <input type="text" class="box" placeholder="enter your last name" required />
+               </div>
+            </div>
+            <span>email</span>
+            <input type="email" class="box" placeholder="enter your email" required />
+            <span>password</span>
+            <input type="password" class="box" placeholder="enter your password" required />
+            <input type="submit" value="register" class="btn" />
+            <p>Nah, it's not my first time!! <a href="#" id="show-login">Login</a></p>
+         </form>
+         <!-- Reset Password Form -->
+         <form id="reset-form" style="display: none;">
+            <h3>reset password</h3>
+            <span>your email</span>
+            <input type="email" class="box" placeholder="enter your registered email" required />
+            <input type="submit" value="send reset link" class="btn" />
+            <p id="reset-msg" style="font-size: 1.4rem; text-align:center; display: none;"></p>
+            <p>Remembered your password? <a href="#" id="show-login-again">Login</a></p>
+         </form>
+      </div>
+      <!-- ======= User Menu (Dropdown) ======= -->
+      <div id="user-menu" style="display: none; position: absolute; top: 70px; right: 20px; background: white; border: 1px solid #ccc; border-radius: 5px; padding: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 1000;">
+         <p id="welcome-name" style="margin: 0 0 10px; font-size: 1.5rem; color: #444;"></p>
+         <a href="favorite.html" style="display: block; margin-bottom: 10px; font-size: 1.4rem; color: #444; text-decoration: none;">My Favorites</a>
+         <button onclick="logout()" style="background: var(--pink); color: white; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer;">Logout</button>
+      </div>
+      <!-- ======= Book Details Section ======= -->
+      <section class="book-details-section">
+         <div class="container">
+            <!-- Book Details Display -->
+            <div class="book-details">
+               <div class="book-image">
+                  <img src="assets/images/boooks/book-11.png" alt="Book Cover">
+               </div>
+               <div class="book-info">
+                  <h2>Yasmin abid</h2>
+                  <div class="author">Dr.khawla hamdy</div>
+                  <div class="rating">
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <span>(4.9/5 - 12.483 reviews)</span>
+                     
+                  </div>
+                  <div class="pricing">
+                     <span class="price-original">$12.31</span>
+                     <span class="price-discount">$19.47</span>
+                     <span class="save">Save 37%</span>
+                  </div>
+                  <div class="action-buttons">
+                     <button class="btn">Add to Cart</button>
+                     <button class="btn btn-favorite" id="bookmark-btn">
+                     <i class="fa-regular fa-bookmark"></i> Bookmark
+                     </button>
+
+                  </div>
+                  <div class="social-share">
+                     <p>Share:</p>
+                     <div class="social-icons">
+                        <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Book Description -->
+            <div class="book-description">
+               <h3>Description</h3>
+               <p>I fell in love with him from the first moment. I know, it's strange for a mother to say this... A mother loves all her children. But it took me some time to love my own children! I gradually got used to them, then accepted their appearance and felt like they belonged to me... But with Ahmed, I was in love from the moment he was born. I stared at him all day, as if he were my first child. He was a completely white little angel, and he didn't cry like other children. Having him by my side made me feel serenity and peace. And I needed</p>
+            </div>
+            <!-- Tabs Section -->
+            <div class="book-details-tabs">
+               <div class="tabs">
+                  <button class="tab-button active" data-tab="publishers">Publishers & Locations</button>
+                  <button class="tab-button" data-tab="compare">Compare Prices</button>
+                  <button class="tab-button" data-tab="reviews">Customer Reviews</button>
+               </div>
+               <!-- Publishers Tab -->
+               <div class="tab-content active" id="publishers">
+                  <div class="publishers">
+                     <div class="publisher">
+                        <h4>Cairo Books</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> Cairo, Egypt</p>
+                        <p><i class="fa-solid fa-language"></i> Arabic</p>
+                        <p><i class="fa-solid fa-calendar"></i> Published: Jan 2023</p>
+                        <p class="price">320</p>
+                     </div>
+                     <div class="publisher">
+                        <h4>labnon</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> bairot</p>
+                        <p><i class="fa-solid fa-language"></i> Arabic</p>
+                        <p><i class="fa-solid fa-calendar"></i> Published: Feb 2023</p>
+                        <p class="price">32.95$</p>
+                     </div>
+                     <div class="publisher">
+                        <h4>World Literature Press</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> London, UK</p>
+                        <p><i class="fa-solid fa-language"></i> English (Translation)</p>
+                        <p><i class="fa-solid fa-calendar"></i> Published: Apr 2023</p>
+                        <p class="price">$29.95</p>
+                     </div>
+                     <div class="publisher">
+                        <h4>Amman Books</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> Amman, Jordan</p>
+                        <p><i class="fa-solid fa-language"></i> Arabic</p>
+                        <p><i class="fa-solid fa-calendar"></i> Published: Mar 2023</p>
+                        <p class="price">$26.19</p>
+                     </div>
+                  </div>
+               </div>
+               <!-- Compare Prices Tab -->
+               <div class="tab-content" id="compare">
+                  <table class="prices-table">
+                     <thead>
+                        <tr>
+                           <th>Store</th>
+                           <th>Format</th>
+                           <th>Shipping</th>
+                           <th>Price</th>
+                           <th>Total</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr class="best-price">
+                           <td>Local Bookstore</td>
+                           <td>Hardcover</td>
+                           <td>$0 (In-store)</td>
+                           <td>$30</td>
+                           <td class="price">$26.99</td>
+                        </tr>
+                        <tr>
+                           <td>Online Retailer A</td>
+                           <td>Hardcover</td>
+                           <td>$3.99</td>
+                           <td>$23.50</td>
+                           <td>$29.49</td>
+                        </tr>
+                        <tr>
+                           <td>Online Retailer B</td>
+                           <td>Paperback</td>
+                           <td>$22.99</td>
+                           <td>$29.99</td>
+                           <td>$30.98</td>
+                        </tr>
+                        <tr>
+                           <td>Book Warehouse</td>
+                           <td>Hardcover</td>
+                           <td>$24.99</td>
+                           <td>$21.99</td>
+                           <td>$34.98</td>
+                        </tr>
+                        <tr>
+                           <td>eBook Store</td>
+                           <td>eBook</td>
+                           <td>$0</td>
+                           <td>$24.99</td>
+                           <td>$33.99</td>
+                        </tr>
+                        <tr>
+                           <td>Audiobook Service</td>
+                           <td>Audiobook</td>
+                           <td>$0</td>
+                           <td>$29.99</td>
+                           <td>$32.99</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <!-- Reviews Tab -->
+               <div class="tab-content" id="reviews">
+                  <!-- Review 1 -->
+                  <div class="review">
+                     <div class="review-header">
+                        <div class="review-user">
+                           <img src="assets\images\reviews\pic-4.jpg" alt="User Avatar">
+                           <div class="name">sara</div>
+                        </div>
+                        <div class="review-date">Feb 10, 2018</div>
+                     </div>
+                     <div class="review-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        
+                     </div>
+                     <div class="review-content">
+                        Very nice. I recommend it. You feel like you are the heroine.
+                     </div>
+                  </div>
+                  <!-- Review 2 -->
+                  <div class="review">
+                     <div class="review-header">
+                        <div class="review-user">
+                           <img src="/api/placeholder/50/50" alt="User Avatar">
+                           <div class="name">heba ahmed</div>
+                        </div>
+                        <div class="review-date">May 5, 2020</div>
+                     </div>
+                     <div class="review-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                     </div>
+                     <div class="review-content">
+                       A wonderful novel in every sense of the word. It captivates the reader from the first page until the end. I never got bored while reading it, even though it is long. I was able to read it in a day and a half.
+                  </div>
+                  <!-- Review 3 -->
+                  <div class="review">
+                     <div class="review-header">
+                        <div class="review-user">
+                           <img src="/api/placeholder/50/50" alt="User Avatar">
+                           <div class="name">Nour K.</div>
+                        </div>
+                        <div class="review-date">April 28, 2025</div>
+                     </div>
+                     <div class="review-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                     </div>
+                     <div class="review-content">
+                        I recently finished reading "White Jasmine," the first chapter in Dr. Khawla Hamdi's trilogy.
+
+I was overwhelmed with joy as I read through the chapters, and I felt so blessed that I envied myself for the beauty I experienced.
+
+Despite the novel's length, I wished it would never end. When I closed the last page, I was filled with deep sadness and a deep longing to read the first two parts.
+                        
+                     </div>
+                  </div>
+                  <!-- Write Review Form -->
+                  <div class="write-review">
+                     <h4>Write a Review</h4>
+                     <form class="review-form">
+                        <div class="star-rating">
+                           <i class="fa-regular fa-star" data-rating="1"></i>
+                           <i class="fa-regular fa-star" data-rating="2"></i>
+                           <i class="fa-regular fa-star" data-rating="3"></i>
+                           <i class="fa-regular fa-star" data-rating="4"></i>
+                           <i class="fa-regular fa-star" data-rating="5"></i>
+                        </div>
+                        <textarea placeholder="Share your thoughts about this book..."></textarea>
+                        <button type="submit" class="btn">Submit Review</button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- ======= Footer Section ======= -->
+      <section class="footer">
+         <div class="box-container">
+            <div class="box">
+               <h3>Quick links</h3>
+               <a href="index.html"><i class="fa-solid fa-arrow-right"></i> Home</a>
+               <a href="library.html"><i class="fa-solid fa-arrow-right"></i> New Releases</a>
+               <a href="book-club.html"><i class="fa-solid fa-arrow-right"></i> Book Club</a>
+               <a href="blogs.html"><i class="fa-solid fa-arrow-right"></i> Blog</a>
+               <a href="contact.html"><i class="fa-solid fa-arrow-right"></i> Contact</a>
+            </div>
+            <div class="box">
+               <h3>Extra links</h3>
+               <a href="library.html"><i class="fa-solid fa-arrow-right"></i> Search Books</a>
+               <a href="compare.html"><i class="fa-solid fa-arrow-right"></i> Compare Books</a>
+               <a href="store.html"><i class="fa-solid fa-arrow-right"></i> Online Bookstore</a>
+               <a href="index.html#reviews"><i class="fa-solid fa-arrow-right"></i> Reviews & Ratings</a>
+               <a href="#interview"><i class="fa-solid fa-arrow-right"></i> interviews & Events</a>
+            </div>
+            <div class="box">
+               <h3>Contact info</h3>
+               <a href="tel:+201211774738"><i class="fa-solid fa-phone"></i> +20 1211774738</a>
+               <a href="tel:+201019720641"><i class="fa-solid fa-phone"></i> +20 1019720641</a>
+               <a href="mailto:amr10tuf@gmail.com"><i class="fa-solid fa-envelope"></i> amr10tuf@gmail.com</a>
+               <img src="assets/images/boooks/m8olty.png" class="m8olty" />
+            </div>
+         </div>
+         <div class="share">
+            <a href="https://www.linkedin.com/in/amryb/" class="fab fa-linkedin"></a>
+            <a href="https://github.com/AMRYB" class="fa-brands fa-github"></a>
+            <a href="https://www.facebook.com/DrAmryasser" class="fa-brands fa-facebook-f"></a>
+            <a href="https://discord.gg/AMRYB" class="fa-brands fa-discord"></a>
+         </div>
+      </section>
+      <!-- ======= Scripts ======= -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>
